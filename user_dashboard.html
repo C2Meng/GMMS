@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Gym System</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- 1. Global CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- 2. Dashboard CSS -->
+    <link href="css/user_dashboard.css" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <!-- White Mask Overlay for Background -->
+    <div class="app-mask"></div>
+
+    <!-- Central Mobile Frame -->
+    <div class="mobile-frame shadow-lg">
+        
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center p-3 bg-white border-bottom sticky-top z-3">
+            <div class="d-flex align-items-center gap-2">
+                <img src="images/company-logo1.png" alt="Frontdesk" style="height: 24px;">
+                <span class="fw-bold" style="font-size: 0.95rem;">Username</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1" style="background-color: #89CFF0;">
+                    Active <i class="bi bi-gear"></i>
+                </span>
+                <!-- Clickable QR Code -->
+                <a href="qr-scanner.html" class="text-decoration-none">
+                    <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="frame-content pb-4">
+            
+            <!-- Balances Section -->
+            <div class="row g-2 px-3 pt-3 mb-4">
+                <div class="col-6">
+                    <div class="card border-0 h-100 p-2 rounded-3 shadow-sm" style="background-color: #6CB4EE;">
+                        <small class="fw-bold text-dark" style="font-size: 0.75rem;">Credit Balance</small>
+                        <h2 class="text-end mb-0 mt-3 fw-bold text-dark">120</h2>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card border h-100 p-2 rounded-3 shadow-sm bg-white" style="border-color: #444 !important;">
+                        <small class="fw-bold text-dark" style="font-size: 0.75rem;">Outstanding Bill</small>
+                        <h2 class="text-end mb-0 mt-3 fw-bold text-dark"><span class="fs-6 me-1">RM</span>54</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="px-3 mb-4">
+                <div class="d-flex justify-content-between text-center quick-actions">
+                    <a href="schedule.html" class="action-item text-decoration-none">
+                        <div class="icon-circle bg-info bg-opacity-25 text-primary mb-1"><i class="bi bi-calendar4"></i></div>
+                        <span>My Schedule</span>
+                    </a>
+                    <a href="freeze.html" class="action-item text-decoration-none">
+                        <div class="icon-circle bg-info bg-opacity-25 text-primary mb-1"><i class="bi bi-snow"></i></div>
+                        <span>Freezing/<br>Cancellation</span>
+                    </a>
+                    <a href="billing.html" class="action-item text-decoration-none">
+                        <div class="icon-circle bg-info bg-opacity-25 text-primary mb-1"><i class="bi bi-currency-dollar"></i></div>
+                        <span>Upcoming Billing<br>and History</span>
+                    </a>
+                    <a href="book-facility.html" class="action-item text-decoration-none">
+                        <div class="icon-circle bg-info bg-opacity-25 text-primary mb-1"><i class="bi bi-universal-access"></i></div>
+                        <span>Book<br>Facility</span>
+                    </a>
+                    <a href="feedback.html" class="action-item text-decoration-none">
+                        <div class="icon-circle bg-info bg-opacity-25 text-primary mb-1"><i class="bi bi-chat-square-text"></i></div>
+                        <span>Feedback</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature Image Cards -->
+            <div class="row g-2 px-3 mb-4">
+                <div class="col-6">
+                    <a href="membership.html" class="d-block text-decoration-none feature-link">
+                        <div class="feature-card rounded-3 shadow-sm">
+                            <div class="feature-overlay p-2 d-flex flex-column justify-content-between h-100">
+                                <span class="fw-bold text-dark small">Membership</span>
+                                <i class="bi bi-person-badge fs-4 text-end text-dark"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="book-class.html" class="d-block text-decoration-none feature-link">
+                        <div class="feature-card rounded-3 shadow-sm">
+                            <div class="feature-overlay p-2 d-flex flex-column justify-content-between h-100">
+                                <span class="fw-bold text-dark small">Book Class</span>
+                                <i class="bi bi-journal-check fs-4 text-end text-dark"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="appointment.html" class="d-block text-decoration-none feature-link">
+                        <div class="feature-card rounded-3 shadow-sm">
+                            <div class="feature-overlay p-2 d-flex flex-column justify-content-between h-100">
+                                <span class="fw-bold text-dark small">Make Appointment<br>With Trainer</span>
+                                <i class="bi bi-person-walking fs-4 text-end text-dark"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="evolution.html" class="d-block text-decoration-none feature-link">
+                        <div class="feature-card rounded-3 shadow-sm">
+                            <div class="feature-overlay p-2 d-flex flex-column justify-content-between h-100">
+                                <span class="fw-bold text-dark small">Evolution<br>Program</span>
+                                <i class="bi bi-graph-up-arrow fs-4 text-end text-dark"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hot Deals Section -->
+            <div class="px-3">
+                <h6 class="fw-bold mb-3">Hot Deals</h6>
+                
+                <div class="d-flex overflow-auto gap-3 pb-2 hide-scrollbar w-100 flex-nowrap" style="touch-action: pan-x;">
+                    
+                    <!-- Deal Card 1 -->
+                    <a href="deal-trial.html" class="card deal-card border shadow-sm flex-shrink-0 text-decoration-none text-dark d-block">
+                        <div class="deal-image bg-dark text-white d-flex align-items-center justify-content-center text-center p-3" style="height: 120px;">
+                            <h5 class="fw-bold mb-0">GYM<br>MEMBERSHIP<br>TRIAL</h5>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">Membership Free Trial</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.65rem; line-height: 1.2;">Try first !! Your gym experiences is our first consideration!</p>
+                            </div>
+                            <div class="text-end mt-2">
+                                <span class="fw-bold text-primary" style="font-size: 0.8rem;">FREE</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Deal Card 2 -->
+                    <a href="deal-promo.html" class="card deal-card border shadow-sm flex-shrink-0 text-decoration-none text-dark d-block">
+                        <div class="deal-image bg-secondary text-white d-flex align-items-center justify-content-center text-center p-3" style="height: 120px;">
+                            <h5 class="fw-bold mb-0">MONTHLY<br>PROMO</h5>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">Discounted Rate</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.65rem; line-height: 1.2;">Sign up this month for 20% off your first 3 months.</p>
+                            </div>
+                            <div class="text-end mt-2">
+                                <span class="fw-bold text-primary" style="font-size: 0.8rem;">RM 120</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Deal Card 3 (Added to test scrolling) -->
+                    <a href="deal-pt.html" class="card deal-card border shadow-sm flex-shrink-0 text-decoration-none text-dark d-block">
+                        <div class="deal-image bg-info text-white d-flex align-items-center justify-content-center text-center p-3" style="height: 120px;">
+                            <h5 class="fw-bold mb-0">PT<br>SESSIONS</h5>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">Personal Training Pack</h6>
+                                <p class="text-muted mb-0" style="font-size: 0.65rem; line-height: 1.2;">Get 5 sessions with a certified trainer at a reduced rate.</p>
+                            </div>
+                            <div class="text-end mt-2">
+                                <span class="fw-bold text-primary" style="font-size: 0.8rem;">RM 450</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div> 
+    </div> 
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

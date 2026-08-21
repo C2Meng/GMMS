@@ -1,0 +1,426 @@
+/* =========================================================
+   Frontdesk — shared design tokens & component styles
+   Built on top of Bootstrap 5. Include this file (and
+   index.js) on every page that reuses this design system.
+   ========================================================= */
+
+/* ---- Design tokens (from the original Tailwind config) ---- */
+:root {
+  /* Colors */
+  --fd-primary: #0061a5;
+  --fd-on-primary: #ffffff;
+  --fd-primary-container: #0099ff;
+  --fd-on-primary-container: #002f54;
+
+  --fd-secondary: #745b00;
+  --fd-on-secondary: #ffffff;
+  --fd-secondary-container: #fecb00;
+  --fd-on-secondary-container: #6e5700;
+
+  --fd-tertiary: #006c49;
+  --fd-tertiary-container: #00aa76;
+  --fd-on-tertiary-container: #003522;
+
+  --fd-error: #ba1a1a;
+  --fd-on-error: #ffffff;
+  --fd-error-container: #ffdad6;
+  --fd-on-error-container: #93000a;
+
+  --fd-background: #f8f9ff;
+  --fd-on-background: #0b1c30;
+  --fd-surface: #f8f9ff;
+  --fd-surface-dim: #cbdbf5;
+  --fd-surface-bright: #f8f9ff;
+  --fd-on-surface: #0b1c30;
+  --fd-on-surface-variant: #3f4753;
+
+  --fd-surface-container-lowest: #ffffff;
+  --fd-surface-container-low: #eff4ff;
+  --fd-surface-container: #e5eeff;
+  --fd-surface-container-high: #dce9ff;
+  --fd-surface-container-highest: #d3e4fe;
+
+  --fd-outline: #707884;
+  --fd-outline-variant: #bfc7d5;
+  --fd-inverse-surface: #213145;
+  --fd-inverse-on-surface: #eaf1ff;
+
+  /* Spacing scale */
+  --fd-space-base: 4px;
+  --fd-space-xs: 8px;
+  --fd-space-sm: 16px;
+  --fd-space-md: 24px;
+  --fd-space-lg: 40px;
+  --fd-space-xl: 64px;
+  --fd-space-2xl: 96px;  /* generous section-to-section rhythm, desktop */
+  --fd-space-3xl: 120px; /* hero-scale rhythm, desktop */
+  --fd-space-gutter: 24px;
+  --fd-space-margin-mobile: 16px;
+  --fd-space-margin-desktop: 48px;
+
+  /* Radius scale */
+  --fd-radius: 0.25rem;
+  --fd-radius-lg: 0.5rem;
+  --fd-radius-xl: 0.75rem;
+  --fd-radius-full: 9999px;
+
+  /* Typography */
+  --fd-font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --fd-font-mono: "JetBrains Mono", monospace;
+}
+
+/* ---- Base ---- */
+body {
+  font-family: var(--fd-font-display);
+  color: var(--fd-on-surface);
+  background-color: var(--fd-background);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}
+.material-symbols-outlined.fill {
+  font-variation-settings: "FILL" 1;
+}
+
+/* ---- Utility color classes (map tokens onto Bootstrap-style hooks) ---- */
+.text-fd-primary { color: var(--fd-primary) !important; }
+.text-fd-on-surface { color: var(--fd-on-surface) !important; }
+.text-fd-on-surface-variant { color: var(--fd-on-surface-variant) !important; }
+.bg-fd-primary { background-color: var(--fd-primary) !important; }
+.bg-fd-surface { background-color: var(--fd-surface) !important; }
+.bg-fd-surface-container { background-color: var(--fd-surface-container) !important; }
+.bg-fd-surface-container-low { background-color: var(--fd-surface-container-low) !important; }
+.bg-fd-surface-container-lowest { background-color: var(--fd-surface-container-lowest) !important; }
+.bg-fd-surface-container-highest { background-color: var(--fd-surface-container-highest) !important; }
+
+/* ---- Section spacing helpers ----
+   .fd-section is the single source of truth for vertical rhythm
+   between major page sections. Don't mix Bootstrap's py-*/pt-*/pb-*
+   utilities onto a .fd-section element — those are !important in
+   Bootstrap's stylesheet and will silently override these values.
+   For one-off adjustments, add a modifier class here instead. */
+.fd-section {
+  padding-top: var(--fd-space-xl);
+  padding-bottom: var(--fd-space-xl);
+  padding-left: var(--fd-space-margin-mobile);
+  padding-right: var(--fd-space-margin-mobile);
+}
+@media (min-width: 768px) {
+  .fd-section {
+    padding-top: var(--fd-space-2xl);
+    padding-bottom: var(--fd-space-2xl);
+    padding-left: var(--fd-space-margin-desktop);
+    padding-right: var(--fd-space-margin-desktop);
+  }
+  .login-form-wrapper {
+        margin-left: 30%; 
+    }
+}
+
+/* Modifiers — use these instead of Bootstrap spacing utilities when
+   a specific section needs to break from the default rhythm. */
+.fd-section--tight-top {
+  padding-top: var(--fd-space-md);
+}
+@media (min-width: 768px) {
+  .fd-section--tight-top { padding-top: var(--fd-space-lg); }
+}
+.fd-section--tight-bottom {
+  padding-bottom: var(--fd-space-md);
+}
+@media (min-width: 768px) {
+  .fd-section--tight-bottom { padding-bottom: var(--fd-space-lg); }
+}
+
+/* ---- Navbar ---- */
+.fd-navbar {
+  background-color: rgba(0, 97, 165, 0.85);
+  backdrop-filter: blur(8px);
+  height: 5rem;
+}
+.fd-navbar .navbar-brand {
+  color: var(--fd-on-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fd-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  border-radius: var(--fd-radius-lg);
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fd-navbar .nav-link:hover,
+.fd-navbar .nav-link:focus {
+  color: var(--fd-on-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.fd-navbar .nav-link.active {
+  color: var(--fd-on-primary);
+  font-weight: 700;
+  border-bottom: 2px solid var(--fd-secondary-container);
+}
+.fd-navbar .btn-login {
+  color: var(--fd-on-primary);
+  font-weight: 600;
+}
+.fd-navbar .btn-login:hover { background-color: rgba(255, 255, 255, 0.1); }
+.fd-navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.fd-navbar-toggler .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* ---- Buttons ---- */
+.btn-fd-primary {
+  background-color: var(--fd-primary);
+  color: var(--fd-on-primary);
+  font-weight: 700;
+  border-radius: var(--fd-radius-lg);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-fd-primary:hover {
+  color: var(--fd-on-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.btn-fd-outline {
+  background-color: transparent;
+  border: 2px solid var(--fd-primary);
+  color: var(--fd-primary);
+  font-weight: 700;
+  border-radius: var(--fd-radius-lg);
+  padding: 1rem 2rem;
+  transition: background-color 0.2s ease;
+}
+.btn-fd-outline:hover {
+  background-color: var(--fd-surface-container);
+  color: var(--fd-primary);
+}
+.btn-fd-secondary {
+  background-color: var(--fd-secondary-container);
+  color: var(--fd-on-secondary-container);
+  font-weight: 700;
+  border-radius: var(--fd-radius-lg);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-fd-secondary:hover {
+  color: var(--fd-on-secondary-container);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Hero ---- */
+.fd-hero-frame {
+  border-radius: var(--fd-radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--fd-outline-variant);
+  background-color: var(--fd-surface-container-lowest);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+.fd-hero-frame-bar {
+  background-color: var(--fd-surface-container-highest);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.fd-hero-frame-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+/* ---- Marquee (infinite scrolling carousel) ----
+   Usage: wrap two identical copies of your items in
+   .fd-marquee > .fd-marquee-track, and mark the second
+   copy aria-hidden="true". The track is exactly 2x the
+   content width, so animating to translateX(-50%) loops
+   seamlessly back to the start. */
+.fd-marquee {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+.fd-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: var(--fd-space-gutter);
+  animation: fd-marquee-scroll 36s linear infinite;
+}
+.fd-marquee:hover .fd-marquee-track,
+.fd-marquee:focus-within .fd-marquee-track,
+.fd-marquee-track.is-paused {
+  animation-play-state: paused;
+}
+@keyframes fd-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fd-marquee-track { animation: none; }
+  .fd-marquee { overflow-x: auto; }
+}
+
+.fd-marquee-card {
+  flex: 0 0 auto;
+  width: 240px;
+  background-color: var(--fd-surface-container-lowest);
+  border: 1px solid var(--fd-outline-variant);
+  border-radius: var(--fd-radius-xl);
+  padding: var(--fd-space-sm);
+}
+.fd-marquee-card-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--fd-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--fd-space-xs);
+  background-color: rgba(0, 97, 165, 0.1);
+}
+.fd-marquee-card-icon.fd-card-icon-alt { background-color: rgba(254, 203, 0, 0.2); }
+.fd-marquee-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.fd-marquee-card p {
+  font-size: 0.8rem;
+  color: var(--fd-on-surface-variant);
+  margin-bottom: 0.5rem;
+}
+.fd-marquee-card .fd-marquee-stat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--fd-primary);
+}
+
+/* ---- Cards ---- */
+.fd-card {
+  background-color: var(--fd-surface-container-lowest);
+  border-radius: var(--fd-radius-xl);
+  padding: var(--fd-space-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+}
+.fd-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(0, 97, 165, 0.2);
+}
+.fd-card-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--fd-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--fd-space-md);
+  background-color: rgba(0, 97, 165, 0.1);
+  transition: background-color 0.2s ease;
+}
+.fd-card:hover .fd-card-icon { background-color: rgba(0, 97, 165, 0.2); }
+.fd-card-icon.fd-card-icon-alt {
+  background-color: rgba(254, 203, 0, 0.2);
+}
+.fd-card:hover .fd-card-icon.fd-card-icon-alt { background-color: rgba(254, 203, 0, 0.3); }
+
+.fd-admin-card {
+  background-color: var(--fd-surface-container-lowest);
+  border-radius: var(--fd-radius-xl);
+  padding: var(--fd-space-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+  height: 100%;
+}
+.fd-admin-card:hover { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); }
+.fd-admin-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--fd-radius-lg);
+  background-color: var(--fd-surface-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--fd-space-sm);
+}
+
+/* ---- CTA ---- */
+.fd-cta {
+  background-color: var(--fd-primary);
+  color: var(--fd-on-primary);
+}
+
+/* ---- Footer ---- */
+.fd-footer {
+  background-color: var(--fd-surface-container-highest);
+  border-top: 1px solid var(--fd-outline-variant);
+}
+.fd-footer a {
+  color: var(--fd-on-surface-variant);
+  text-decoration: none;
+}
+.fd-footer a:hover {
+  color: var(--fd-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.fd-footer h4 {
+  font-family: var(--fd-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--fd-on-surface);
+}
+
+/* =========================================================
+   Mobile App Layout Shell (Used on all interior app pages)
+   ========================================================= */
+
+.app-body {
+    background: url('../images/gym-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    position: relative;
+}
+
+.app-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); 
+    z-index: 0;
+}
+
+.mobile-frame {
+    width: 100%;
+    max-width: 414px; 
+    background-color: #fcfcfc;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1; 
+    overflow-x: hidden; 
+}

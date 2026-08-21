@@ -1,0 +1,67 @@
+/* Full screen background setup */
+.login-page {
+    min-height: 100vh;
+    background: url('../images/gym-bg.png') no-repeat center right; 
+    background-size: cover;
+    position: relative;
+}
+
+/* Left panel with the white to transparent gradient fade */
+.login-panel {
+    min-height: 100vh;
+    /* Increased the first value to 80% to make the solid white stretch much further */
+    background: linear-gradient(to right, rgba(248, 249, 250, 1) 80%, rgba(248, 249, 250, 0.8) 90%, rgba(248, 249, 250, 0) 100%);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centering the form vertically */
+.login-form-wrapper {
+    max-width: 420px;
+    width: 100%; /* Ensures the form doesn't shrink */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media (min-width: 768px) {
+  .login-form-wrapper {
+        margin-left: 30%; 
+    }
+}
+
+
+
+/* Form styling */
+.form-control {
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.btn-black {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-weight: 500;
+}
+
+.btn-black:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.text-link {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
