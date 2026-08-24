@@ -75,9 +75,32 @@
     });
   }
 
+/**
+   * Toggle active state on payment method cards.
+   * Works on any page containing elements with the .payment-card class.
+   */
+  function initPaymentToggle() {
+    var paymentCards = document.querySelectorAll('.payment-card');
+    
+    // Safety check: only run this if payment cards actually exist on the page
+    if (!paymentCards.length) return; 
+
+    paymentCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        // Remove active class from all cards
+        paymentCards.forEach(function (c) { 
+            c.classList.remove('active'); 
+        });
+        // Add active class to the clicked card
+        this.classList.add('active');
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initScrollSpy();
     initMobileNavAutoClose();
     initMarqueeTouchPause();
+    initPaymentToggle();
   });
 })();

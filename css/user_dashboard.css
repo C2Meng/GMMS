@@ -27,10 +27,17 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: var(--fd-mobile-primary) !important;
+    color: #212529 !important;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+}
+
+.credit-balance-card {
+    background-color: var(--fd-mobile-primary);
+    color: #212529;
 }
 
 /* Feature Cards (with gradient/image overlay) */
@@ -47,8 +54,132 @@
     background-color: #e0e0e0; 
     background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%), url('../images/gym-bg.png') no-repeat center center;
     background-size: cover;
+}
+
+/* =========================================================
+   Dashboard Page Specific Styles
+   ========================================================= */
+
+/* Quick Actions Styling */
+.quick-actions .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%; 
+    transition: opacity 0.2s ease;
+}
+
+.quick-actions .action-item:hover {
+    opacity: 0.7;
+}
+
+.quick-actions .action-item span {
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.1;
+    margin-top: 0.25rem;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Feature Cards */
+.feature-link {
+    transition: transform 0.2s ease;
+}
+
+.feature-link:hover .feature-card {
+    transform: scale(0.97); 
+}
+
+.feature-card {
+    height: 80px;
+    background-color: #e0e0e0; 
     border: 1px solid #dcdcdc;
     overflow: hidden;
+}
+
+/* 4 Unique Backgrounds for Feature Cards */
+.bg-membership {
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.bg-class {
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.bg-trainer {
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-3.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.bg-evolution {
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-4.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.feature-overlay {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hot Deals Horizontal Scroll Section */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; 
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.deal-card {
+    width: 220px; 
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; 
+}
+
+.deal-image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/gym-bg.png') center/cover;
+}
+
+.deal-image.deal-1 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-1.jpg');
+}
+
+.deal-image.deal-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-2.jpg');
+}
+
+.deal-image.deal-3 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-3.jpg');
+}
+
+.deal-1 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-1.jpg');
+}
+
+.deal-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-2.jpg');
+}
+
+.deal-3 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/deal-3.jpg');
 }
 
 .feature-overlay {

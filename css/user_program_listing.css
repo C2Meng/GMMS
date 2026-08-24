@@ -1,0 +1,80 @@
+/* Program / Book Class Specific Styles */
+
+.program-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #687585;
+    font-size: 0.75rem;
+}
+
+.breadcrumb-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #0061a5;
+    font-weight: 700;
+}
+
+.breadcrumb-back:hover {
+    color: #004b80;
+}
+
+.breadcrumb-back i {
+    font-size: 0.9rem;
+}
+
+.breadcrumb-divider {
+    color: #9aa6b2;
+    font-size: 0.65rem;
+}
+
+.breadcrumb-current {
+    color: #263746;
+    font-weight: 700;
+}
+
+.program-link {
+    display: block;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-link:hover .program-card {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 48, 84, 0.16) !important;
+}
+
+.program-card {
+    min-height: 240px;
+    overflow: hidden;
+    border-color: #c7d0da !important;
+    background-color: #ffffff;
+}
+
+.program-image {
+    width: 100%;
+    height: 160px;
+    border-bottom: 1px solid #dee2e6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-program-1 {
+    background-image: url('../images/program-1.jpg');
+}
+
+.bg-program-2 {
+    background-image: url('../images/program-2.jpg');
+}
+
+.bg-program-3 {
+    background-image: url('../images/program-3.jpg');
+}
+
+@media (max-width: 360px) {
+    .program-image {
+        height: 140px;
+    }
+}

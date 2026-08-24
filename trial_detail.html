@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial Class Registration - Gym System</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- 1. Global CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <!-- White Mask Overlay for Background -->
+    <div class="app-mask"></div>
+
+    <!-- Central Mobile Frame -->
+    <div class="mobile-frame shadow-lg d-flex flex-column">
+        
+        <!-- Global Header -->
+        <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_dashboard.html">
+                    <img src="images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                </a>
+                <span class="app-header-username">Username</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                    Active <i class="bi bi-gear"></i>
+                </span>
+                <a href="qr-scanner.html" class="text-decoration-none">
+                    <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area (Scrollable) -->
+        <div class="frame-content pb-4 flex-grow-1 overflow-auto">
+            
+            <!-- Global Breadcrumb -->
+            <div class="app-breadcrumb">
+                <a href="user_dashboard.html">Dashboard</a> &gt; Trial Class Registration
+            </div>
+
+            <!-- Page Content -->
+            <div class="px-3 pb-4">
+                
+                <!-- Hero Banner Image -->
+                <!-- Assuming you have a banner image saved for this. You can reuse your hot deal image here. -->
+                <img src="images/deal-1.jpg" alt="Gym Membership Trial" class="img-fluid rounded-4 mb-3 w-100" style="object-fit: cover; height: 160px;">
+
+                <!-- Title & Description -->
+                <h3 class="fw-bold mb-2">4-Day Gym Trial</h3>
+                <p class="text-dark mb-4" style="font-size: 0.75rem; line-height: 1.4; font-weight: 700;">
+                    Enjoy access to our gym for 4 days with this trial membership. The trial is day-based, allowing you to visit and access the gym on any 4 eligible days during the trial period.
+                </p>
+
+                <!-- Additional Information List -->
+                <div class="mb-4">
+                    <h6 class="fw-bold text-secondary mb-1" style="font-size: 0.85rem;">Additional Information:</h6>
+                    <ul class="text-dark fw-bold mb-0" style="font-size: 0.75rem; padding-left: 1.25rem; line-height: 1.4;">
+                        <li>Valid for 4 gym access days.</li>
+                        <li>Access is counted by days, not consecutive calendar days.</li>
+                        <li>One trial per user only.</li>
+                        <li>Trial membership is non-transferable.</li>
+                        <li>A valid registration is required before accessing the gym.</li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown Form Section -->
+                <div class="mb-4 mt-2">
+                    <label for="referralSource" class="form-label fw-bold text-dark mb-1" style="font-size: 0.8rem;">How you know about us?</label>
+                    <!-- Bootstrap form-select handles the dropdown arrow and styling automatically -->
+                    <select class="form-select text-secondary" id="referralSource" style="padding: 0.7rem; font-size: 0.85rem; border-color: #ced4da;">
+                        <option value="" selected disabled>FACEBOOK</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="friend">Friend / Family</option>
+                        <option value="walk_in">Walk-in</option>
+                    </select>
+                </div>
+
+                <!-- Action Button (Using global class + text-uppercase) -->
+                <button type="button" class="btn-app-primary w-100 text-uppercase mt-2">Start Trial</button>
+
+            </div> <!-- End Page Content -->
+            
+        </div> 
+    </div> 
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
