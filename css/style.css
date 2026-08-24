@@ -574,3 +574,76 @@ body {
     font-size: 0.85rem;
     font-weight: 700;
 }
+
+/* =========================================================
+   Striped Primary Table (Blue & White)
+   ========================================================= */
+.app-table-striped-primary {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+}
+
+.app-table-striped-primary td {
+    padding: 0.85rem;
+    font-weight: 700;
+    color: #000000;
+    width: 50%; /* Keeps columns perfectly equal */
+}
+
+/* Odd Rows (Light Blue) */
+.app-table-striped-primary tr:nth-child(odd) {
+    background-color: var(--fd-mobile-primary);
+}
+.app-table-striped-primary tr:nth-child(odd) td:first-child {
+    border-right: 2px solid #ffffff; 
+}
+
+/* Even Rows (White) */
+.app-table-striped-primary tr:nth-child(even) {
+    background-color: #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   Toggle Tabs & Selection Cards (Active/Inactive states)
+   ========================================================= */
+.toggle-pill {
+    border: 1.5px solid #444444;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.toggle-pill.active {
+    background-color: var(--fd-mobile-primary);
+    border-color: var(--fd-mobile-primary);
+    color: #ffffff;
+}
+
+.selection-card {
+    border: 1px solid #444444;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #a0a0a0; /* Grayed out text for inactive */
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.selection-card.active {
+    background-color: var(--fd-mobile-primary);
+    border-color: var(--fd-mobile-primary);
+    color: #ffffff;
+}
