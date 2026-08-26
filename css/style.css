@@ -7,7 +7,7 @@
 /* ---- Design tokens---- */
 :root {
   /* Colors */
-  --fd-primary: #0061a5;
+  --fd-primary: rgba(0, 97, 165, 0.85);
   --fd-on-primary: #ffffff;
   --fd-primary-container: #0099ff;
   --fd-on-primary-container: #002f54;
@@ -167,6 +167,7 @@ body {
   backdrop-filter: blur(8px);
   height: 5rem;
 }
+
 .fd-navbar .navbar-brand {
   color: var(--fd-on-primary);
   font-weight: 700;
@@ -206,6 +207,61 @@ body {
 }
 .fd-navbar-toggler .navbar-toggler-icon {
   filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+@media (max-width: 767.98px) {
+  .fd-navbar .navbar,
+  .fd-navbar .container-fluid {
+    position: relative;
+  }
+
+  .fd-navbar .navbar-collapse {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0.75rem 1rem 1rem;
+    background-color: var(--fd-surface-container-lowest);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid var(--fd-outline-variant);
+    box-shadow: 0 12px 24px rgba(11, 28, 48, 0.14);
+  }
+
+  .fd-navbar .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .fd-navbar .nav-link {
+    color: var(--fd-on-surface);
+    padding: 0.75rem 0.5rem;
+  }
+
+  .fd-navbar .nav-link:hover,
+  .fd-navbar .nav-link:focus {
+    color: var(--fd-primary);
+    background-color: var(--fd-surface-container-low);
+  }
+
+  .fd-navbar .nav-link.active {
+    color: var(--fd-primary);
+    border-bottom: 0;
+  }
+
+  .fd-navbar .navbar-collapse > .d-flex {
+    align-items: stretch !important;
+    flex-direction: column;
+    gap: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .fd-navbar .navbar-collapse .btn-login,
+  .fd-navbar .navbar-collapse .btn-fd-secondary {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* ---- Buttons ---- */
