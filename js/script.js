@@ -391,23 +391,12 @@
   }
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-<<<<<<< Updated upstream
-    loadSharedFragments().then(function () {
-      initScrollSpy();
-      initMobileNavAutoClose();
-      initFeatureCarousel();
-      initFeatureTickers();
-      initMarqueeTouchPause();
-      initPaymentToggle();
-      initFreezeCancelTabs();
-      initFreezePeriodSelection();
-      initFileUpload();
-      initSignaturePad();
-    });
-=======
+document.addEventListener("DOMContentLoaded", function () {
+  loadSharedFragments().then(function () {
     initScrollSpy();
     initMobileNavAutoClose();
+    initFeatureCarousel();
+    initFeatureTickers();
     initMarqueeTouchPause();
     initPaymentToggle();
     initFreezeCancelTabs();
@@ -415,6 +404,6 @@
     initFileUpload();
     initSignaturePad();
     initDealsScroll();
->>>>>>> Stashed changes
   });
+});
 })();

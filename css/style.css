@@ -1560,12 +1560,6 @@ body {
 }
 
 .selection-card.active {
-<<<<<<< Updated upstream
-  background-color: var(--fd-mobile-primary);
-  border-color: var(--fd-mobile-primary);
-  color: #ffffff;
-}
-=======
     background-color: var(--fd-mobile-primary);
     border-color: var(--fd-mobile-primary);
     color: #ffffff;
@@ -1596,4 +1590,3 @@ body {
     cursor: not-allowed;
     text-decoration: line-through;
 }
->>>>>>> Stashed changes
