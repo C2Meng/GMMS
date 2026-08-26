@@ -32,3 +32,18 @@ plans
 policies
 staff list
 audit?
+
+todolist icey:
+
+make the members page from scratch using bootstrap, try to reuse components and elements from style.css
+get checkboxes
+try to make staff schedule page on your own
+once familliar, replicate it for session page
+
+book session modal
+create plan modal
+
+policies
+staff list
+
+configure header and footer for admin pages

@@ -446,6 +446,14 @@ body {
   transform: translateY(-4px);
   border-color: rgba(0, 97, 165, 0.2);
 }
+
+/* Keeps the card static even when hovered */
+.fd-card.no-hover:hover {
+  transform: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-color: transparent;
+}
+
 .fd-card-icon {
   width: 4rem;
   height: 4rem;
@@ -1359,6 +1367,73 @@ body {
   width: 3rem;
   color: #d1d8e0;
   text-align: center;
+}
+
+.fd-list-action-button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 0.35rem;
+}
+
+.fd-list-action-button:hover,
+.fd-list-action-button:focus-visible {
+  color: var(--fd-primary);
+  outline: none;
+}
+
+/* Plans readability scale */
+.fd-list-heading h1 { font-size: 1.5rem; }
+.fd-list-count { font-size: 0.85rem; }
+.fd-list-search { height: 2.5rem; }
+.fd-list-search .bi { font-size: 0.95rem; }
+.fd-list-search input { font-size: 0.9rem; }
+.fd-list-add { font-size: 0.9rem; }
+.fd-list-table { font-size: 0.8rem; }
+.fd-list-table th,
+.fd-list-table td { height: 48px; padding: 0.7rem 0.8rem; }
+.fd-list-table thead th { height: 42px; font-size: 0.65rem; }
+.fd-list-action-button { font-size: 0.85rem; }
+
+/* Readability scale for legacy member and session list pages. */
+.fd-readable-list .fd-card {
+  min-height: calc(100vh - 3rem);
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.fd-readable-list h4 {
+  font-size: 1.5rem;
+}
+.fd-readable-list .input-group {
+  min-height: 2.5rem;
+}
+.fd-readable-list .input-group .bi {
+  font-size: 0.95rem;
+}
+.fd-readable-list .form-control,
+.fd-readable-list .fd-text-link {
+  font-size: 0.9rem;
+}
+.fd-readable-list .table {
+  font-size: 0.8rem;
+}
+.fd-readable-list .table th,
+.fd-readable-list .table td {
+  height: 48px;
+  padding: 0.7rem 0.8rem;
+  vertical-align: middle;
+}
+.fd-readable-list .table thead th {
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+.fd-readable-list .table .small {
+  font-size: 0.8rem !important;
+}
+.fd-readable-list .table .bi-chevron-down {
+  font-size: 0.85rem;
 }
 
 @media (max-width: 767.98px) {
