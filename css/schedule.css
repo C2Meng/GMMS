@@ -1,0 +1,174 @@
+.calendar-wrapper {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            background-color: #ffffff;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+        }
+
+        .calendar-header {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 600px;
+            background-color: #fafafa;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .calendar-table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 0.65rem;
+        }
+
+        .calendar-table th:not(.calendar-time-col),
+        .calendar-table td:not(.calendar-time-col) {
+            width: calc((100% - 55px) / 7);
+        }
+
+        .calendar-table th, .calendar-table td {
+            border: 1px solid #f1f2f4;
+            vertical-align: top;
+        }
+
+        .calendar-table th {
+            text-align: center;
+            padding: 0.7rem 0;
+            color: #4b5563;
+            font-weight: 600;
+            background-color: #fafafa;
+        }
+
+        .calendar-table td {
+            height: 45px;
+            padding: 3px;
+            position: relative;
+        }
+
+        .calendar-time-col {
+            width: 55px;
+            text-align: right;
+            padding-right: 0.75rem !important;
+            color: #9ca3af;
+            font-weight: 500;
+            border-right: 1px solid #e5e7eb !important;
+            vertical-align: middle !important;
+        }
+
+        .event-block {
+            border-radius: 5px;
+            padding: 6px;
+            color: #ffffff;
+            font-size: 0.55rem;
+            font-weight: 600;
+            line-height: 1.25;
+            width: 100%;
+            height: calc(100% - 2px);
+            overflow: hidden;
+            border: none;
+            word-break: break-word;
+            white-space: normal;
+        }
+
+        .event-block.span-2 {
+            position: absolute;
+            height: calc(200% - 2px);
+            z-index: 2;
+        }
+
+        /* Muted, lower-saturation calendar palette (same hues, calmer values) */
+        .bg-cal-purple { background-color: #8b6cb8; }
+        .bg-cal-pink   { background-color: #c96f96; }
+        .bg-cal-teal   { background-color: #2f9e87; }
+        .bg-cal-yellow { background-color: #c99a2e; }
+        .bg-cal-blue   { background-color: #5788c9; }
+        .bg-cal-dark   { background-color: #5b6472; }
+
+        /* Today's Session — timeline list */
+        .session-section {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            background-color: #ffffff;
+            padding: 1.1rem 1.1rem 0.6rem;
+        }
+
+        .session-section-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.9rem;
+        }
+
+        .session-row {
+            display: flex;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            position: relative;
+        }
+
+        .session-row:not(:last-child)::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 22px;
+            bottom: -2px;
+            width: 1px;
+            background-color: #e5e7eb;
+        }
+
+        .session-dot {
+            flex-shrink: 0;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            margin-top: 4px;
+            box-shadow: 0 0 0 3px #ffffff;
+        }
+
+        .session-body {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .session-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.15rem;
+        }
+
+        .session-time {
+            font-size: 0.72rem;
+            color: #9ca3af;
+        }
+
+        .session-status {
+            flex-shrink: 0;
+            font-size: 0.62rem;
+            font-weight: 600;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            white-space: nowrap;
+            margin-top: 0.1rem;
+        }
+
+        .status-live {
+            background-color: #e6f4ea;
+            color: #1e7a3d;
+        }
+
+        .status-upcoming {
+            background-color: #eef2ff;
+            color: #4457c7;
+        }

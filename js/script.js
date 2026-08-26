@@ -366,8 +366,33 @@
     });
   }
 
+  /**
+   * Handle Desktop Horizontal Scrolling for Hot Deals
+   */
+  function initDealsScroll() {
+    var container = document.getElementById('deals-container');
+    var btnLeft = document.querySelector('.deals-scroll-left');
+    var btnRight = document.querySelector('.deals-scroll-right');
+
+    if (!container || !btnLeft || !btnRight) return;
+
+    // The scroll amount is roughly the width of one card + the gap (220px + 16px)
+    var scrollAmount = 236; 
+
+    btnLeft.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent button from submitting or refreshing
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnRight.addEventListener('click', function(e) {
+        e.preventDefault();
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+
 
   document.addEventListener("DOMContentLoaded", function () {
+<<<<<<< Updated upstream
     loadSharedFragments().then(function () {
       initScrollSpy();
       initMobileNavAutoClose();
@@ -380,5 +405,16 @@
       initFileUpload();
       initSignaturePad();
     });
+=======
+    initScrollSpy();
+    initMobileNavAutoClose();
+    initMarqueeTouchPause();
+    initPaymentToggle();
+    initFreezeCancelTabs();
+    initFreezePeriodSelection();
+    initFileUpload();
+    initSignaturePad();
+    initDealsScroll();
+>>>>>>> Stashed changes
   });
 })();

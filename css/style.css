@@ -1560,7 +1560,40 @@ body {
 }
 
 .selection-card.active {
+<<<<<<< Updated upstream
   background-color: var(--fd-mobile-primary);
   border-color: var(--fd-mobile-primary);
   color: #ffffff;
 }
+=======
+    background-color: var(--fd-mobile-primary);
+    border-color: var(--fd-mobile-primary);
+    color: #ffffff;
+}
+
+/* =========================================================
+   Session Time Slot select
+   ========================================================= */
+
+.time-slot-label {
+    font-size: 0.75rem;
+    border: 1.5px solid #ced4da;
+    color: #495057;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-check:checked + .time-slot-label {
+    background-color: var(--fd-mobile-primary, #89CFF0);
+    border-color: var(--fd-mobile-primary, #89CFF0);
+    color: #000000;
+}
+
+.btn-check:disabled + .time-slot-label {
+    background-color: #f8f9fa;
+    color: #adb5bd;
+    border-color: #e9ecef;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+>>>>>>> Stashed changes
