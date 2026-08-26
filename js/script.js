@@ -59,6 +59,73 @@
   }
 
   /**
+   * Switch the landing-page feature panels from their compact tab controller.
+   * The markup stays usable without JavaScript: the first panel is visible
+   * and each tab names the panel it controls.
+   */
+  function initFeatureCarousel() {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll(".fd-feature-tab[data-slide]"));
+    var slides = Array.prototype.slice.call(document.querySelectorAll(".fd-feature-slide"));
+    if (!tabs.length || tabs.length !== slides.length) return;
+
+    function selectSlide(index, focusTab) {
+      if (index < 0 || index >= slides.length) return;
+      tabs.forEach(function (tab, tabIndex) {
+        var isActive = tabIndex === index;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+      slides.forEach(function (slide, slideIndex) {
+        var isActive = slideIndex === index;
+        slide.hidden = !isActive;
+        slide.classList.toggle("is-active", isActive);
+      });
+      if (focusTab) tabs[index].focus();
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () { selectSlide(index, false); });
+      tab.addEventListener("keydown", function (event) {
+        var nextIndex;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+        if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = tabs.length - 1;
+        if (nextIndex === undefined) return;
+        event.preventDefault();
+        selectSlide(nextIndex, true);
+      });
+    });
+  }
+
+  /**
+   * Make every feature-card ticker loop seamlessly. To reuse the pattern on a
+   * new page, add one .fd-ticker-card-group inside a .fd-ticker-track; this
+   * initializer supplies the inaccessible duplicate needed for the CSS loop.
+   */
+  function initFeatureTickers() {
+    var tracks = document.querySelectorAll(".fd-ticker-track");
+    tracks.forEach(function (track) {
+      var sourceGroup = track.querySelector(".fd-ticker-card-group:not([aria-hidden='true'])");
+      if (!sourceGroup || track.querySelector(".fd-ticker-card-group.is-clone")) return;
+
+      var clone = sourceGroup.cloneNode(true);
+      clone.classList.add("is-clone");
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+
+      function syncLoopDistance() {
+        track.style.setProperty("--fd-ticker-shift", "-" + sourceGroup.getBoundingClientRect().width + "px");
+      }
+
+      syncLoopDistance();
+      window.addEventListener("resize", syncLoopDistance);
+      requestAnimationFrame(syncLoopDistance);
+    });
+  }
+
+  /**
    * Pause the feature-card marquee while a touch is on it, since
    * touch devices have no :hover state to pause the CSS animation.
    * Works on any .fd-marquee-track found on the page.
@@ -100,6 +167,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     initScrollSpy();
     initMobileNavAutoClose();
+    initFeatureCarousel();
+    initFeatureTickers();
     initMarqueeTouchPause();
     initPaymentToggle();
   });
