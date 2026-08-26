@@ -7,18 +7,45 @@
   "use strict";
 
   /**
+   * Load reusable HTML fragments into any [data-include] placeholder.
+   * Future pages can inherit the site chrome by adding:
+   * <div data-include="index_header.html"></div> before <main>, and
+   * <div data-include="index_footer.html"></div> after </main>.
+   */
+  function loadSharedFragments() {
+    var placeholders = Array.prototype.slice.call(document.querySelectorAll("[data-include]"));
+    return Promise.all(placeholders.map(function (placeholder) {
+      var source = placeholder.getAttribute("data-include");
+      if (!source) return Promise.resolve();
+
+      return fetch(source)
+        .then(function (response) {
+          if (!response.ok) throw new Error("Could not load " + source);
+          return response.text();
+        })
+        .then(function (markup) {
+          placeholder.innerHTML = markup;
+          placeholder.removeAttribute("data-include");
+        })
+        .catch(function (error) {
+          console.warn(error.message);
+        });
+    }));
+  }
+
+  /**
    * Highlight the nav link matching the section currently in view.
    * Works on any page that has a .fd-navbar containing .nav-link
    * elements with href="#sectionId", and matching <section id="...">
    * elements in the DOM. Safe no-op if neither exists.
    */
   function initScrollSpy() {
-    var navLinks = document.querySelectorAll(".fd-navbar .nav-link[href^='#']");
+    var navLinks = document.querySelectorAll(".fd-navbar .nav-link[href*='#']");
     if (!navLinks.length) return;
 
     var sections = [];
     navLinks.forEach(function (link) {
-      var id = link.getAttribute("href").slice(1);
+      var id = link.getAttribute("href").split("#")[1];
       var section = document.getElementById(id);
       if (section) sections.push({ id: id, el: section, link: link });
     });
@@ -341,15 +368,17 @@
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    initScrollSpy();
-    initMobileNavAutoClose();
-    initFeatureCarousel();
-    initFeatureTickers();
-    initMarqueeTouchPause();
-    initPaymentToggle();
-    initFreezeCancelTabs();
-    initFreezePeriodSelection();
-    initFileUpload();
-    initSignaturePad();
+    loadSharedFragments().then(function () {
+      initScrollSpy();
+      initMobileNavAutoClose();
+      initFeatureCarousel();
+      initFeatureTickers();
+      initMarqueeTouchPause();
+      initPaymentToggle();
+      initFreezeCancelTabs();
+      initFreezePeriodSelection();
+      initFileUpload();
+      initSignaturePad();
+    });
   });
 })();

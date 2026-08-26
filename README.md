@@ -5,6 +5,18 @@
 landing
 SAAS landing page (front landing page done)
 
+## Shared landing-page chrome
+
+`index_header.html` and `index_footer.html` hold the reusable site header and footer. New root-level HTML pages can load them by keeping the existing Bootstrap, `css/style.css`, and `js/script.js` references, then adding these placeholders around their main content:
+
+```html
+<div data-include="index_header.html"></div>
+<main><!-- page-specific content --></main>
+<div data-include="index_footer.html"></div>
+```
+
+`js/script.js` loads the fragments automatically after the page is ready.
+
 Admin users
 admin dashboard
 
