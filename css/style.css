@@ -1206,6 +1206,189 @@ body {
 /* =========================================================
    Global Tables
    ========================================================= */
+.fd-list-page {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  padding: 1.5rem;
+}
+
+.fd-list-shell {
+  width: min(100%, 1100px);
+  min-height: calc(100vh - 3rem);
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background-color: var(--fd-surface-container-lowest);
+}
+
+.fd-list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fd-list-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.fd-list-heading h1 {
+  margin: 0;
+  color: var(--fd-on-background);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.fd-list-count {
+  color: var(--fd-on-surface-variant);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.fd-list-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex: 1 1 auto;
+}
+
+.fd-list-search {
+  display: flex;
+  align-items: center;
+  width: min(100%, 320px);
+  height: 2rem;
+  padding: 0 0.65rem;
+  border: 1px solid #d5dce5;
+  border-radius: 0.3rem;
+  background-color: #fff;
+}
+
+.fd-list-search .bi {
+  color: #8a98aa;
+  font-size: 0.8rem;
+}
+
+.fd-list-search input {
+  min-width: 0;
+  flex: 1;
+  padding: 0 0.5rem;
+  border: 0;
+  outline: 0;
+  color: var(--fd-on-surface);
+  font-size: 0.7rem;
+}
+
+.fd-list-search input::placeholder {
+  color: #7f8b9c;
+}
+
+.fd-list-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--fd-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fd-list-scroll {
+  height: calc(100vh - 7rem);
+  overflow: auto;
+  border: 1px solid #dce2e9;
+  border-radius: 0.35rem;
+  scrollbar-color: #b8c4d2 #f2f5f8;
+}
+
+.fd-list-table {
+  min-width: 800px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #52677f;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+}
+
+.fd-list-table th,
+.fd-list-table td {
+  height: 39px;
+  padding: 0.55rem 0.65rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #eef1f4;
+  white-space: nowrap;
+}
+
+.fd-list-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 36px;
+  background-color: #fff;
+  color: #52677f;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.fd-list-table tbody tr:hover td {
+  background-color: #f7faff;
+}
+
+.fd-list-table td:first-child {
+  color: #60758d;
+  font-weight: 600;
+}
+
+.fd-list-table .fd-list-name {
+  color: var(--fd-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.fd-list-table .fd-list-status {
+  color: var(--fd-primary);
+  font-weight: 600;
+}
+
+.fd-list-table .fd-list-action {
+  width: 3rem;
+  color: #d1d8e0;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .fd-list-page {
+    padding: 0.75rem;
+  }
+
+  .fd-list-shell {
+    min-height: calc(100vh - 1.5rem);
+    padding: 1rem;
+  }
+
+  .fd-list-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fd-list-tools {
+    justify-content: space-between;
+  }
+
+  .fd-list-search {
+    flex: 1;
+  }
+
+  .fd-list-scroll {
+    height: calc(100vh - 11rem);
+  }
+}
+
 .app-table-title {
   font-size: 0.8rem;
   font-weight: 700;
