@@ -1,0 +1,39 @@
+/* =========================================================
+   Feedback Page Specific Styles
+   ========================================================= */
+
+.rating-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Hide the actual default radio button completely */
+.rating-radio {
+    display: none;
+}
+
+/* Style the label to look like the circular button */
+.rating-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2.5px solid var(--fd-mobile-primary);
+    color: var(--fd-mobile-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+/* When the hidden radio is checked, style the label next to it */
+.rating-radio:checked + .rating-label {
+    background-color: var(--fd-mobile-primary);
+    color: #ffffff;
+}
