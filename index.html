@@ -4,9 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontdesk - Streamline Facility Operations</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -14,17 +23,42 @@
       <nav class="navbar navbar-expand-md h-100 px-3 px-md-5">
         <div class="container-fluid" style="max-width: 1440px">
           <a class="navbar-brand" href="#product">Frontdesk</a>
-          <button class="navbar-toggler fd-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fdNavbarCollapse" aria-controls="fdNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse justify-content-between" id="fdNavbarCollapse">
+          <button
+            class="navbar-toggler fd-navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#fdNavbarCollapse"
+            aria-controls="fdNavbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="fdNavbarCollapse"
+          >
             <ul class="navbar-nav gap-md-3 mx-md-auto">
-              <li class="nav-item"><a class="nav-link active" href="#product">Product</a></li>
-              <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-              <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-              <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#product">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resources">Resources</a>
+              </li>
             </ul>
             <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
-              <a class="btn btn-login d-none d-md-inline-flex" href="login.html">Login</a>
-              <a class="btn btn-fd-secondary py-2 px-4" href="#pricing">Get Started</a>
+              <a class="btn btn-login d-none d-md-inline-flex" href="login.html"
+                >Login</a
+              >
+              <a class="btn btn-fd-secondary py-2 px-4" href="#pricing"
+                >Get Started</a
+              >
             </div>
           </div>
         </div>
@@ -37,18 +71,53 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
               <p class="fd-eyebrow">Gym management, simplified</p>
-              <h1 class="fd-hero-title">Run the gym your members <span class="text-fd-primary">love coming back to.</span></h1>
-              <p class="fs-5 text-fd-on-surface-variant mb-4 fd-hero-copy">One practical workspace for memberships, schedules, payments, and daily operations—built for teams that want more time on the floor and less time in spreadsheets.</p>
-              <div class="d-flex flex-wrap gap-3"><a class="btn-fd-primary" href="#pricing">Book a Demo</a><a class="btn-fd-outline" href="#features">Explore Features</a></div>
+              <h1 class="fd-hero-title">
+                Run the gym your members
+                <span class="text-fd-primary">love coming back to.</span>
+              </h1>
+              <p class="fs-5 text-fd-on-surface-variant mb-4 fd-hero-copy">
+                One practical workspace for memberships, schedules, payments,
+                and daily operations—built for teams that want more time on the
+                floor and less time in spreadsheets.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn-fd-primary" href="#pricing">Book a Demo</a
+                ><a class="btn-fd-outline" href="#features">Explore Features</a>
+              </div>
               <div class="fd-hero-points" aria-label="Platform benefits">
-                <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>No setup fee</span>
-                <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Support from real people</span>
+                <span
+                  ><span class="material-symbols-outlined" aria-hidden="true"
+                    >check_circle</span
+                  >No setup fee</span
+                >
+                <span
+                  ><span class="material-symbols-outlined" aria-hidden="true"
+                    >check_circle</span
+                  >Support from real people</span
+                >
               </div>
             </div>
             <div class="col-lg-6">
               <div class="fd-hero-frame">
-                <div class="fd-hero-frame-bar" aria-hidden="true"><span class="fd-hero-frame-dot" style="background-color: var(--fd-error)"></span><span class="fd-hero-frame-dot" style="background-color: var(--fd-secondary-container)"></span><span class="fd-hero-frame-dot" style="background-color: var(--fd-tertiary-container)"></span></div>
-                <img alt="Frontdesk dashboard showing gym activity and membership information" class="w-100 h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Jt7p8RRpcRw1gIGulujtrq5g1FV_fR4xbkwcqGpM9Yz9EOLAoafpFd1BzX3KR2cToskiUX3RqrY9kOujPZaJZLsh_cQnSICRkroi1FWAi5F85RgiEazRLyW3XPxAoopMk2P88K0ImJHUw7ukuXTt0Bw30uB5Fqk6Ro_UyG_BlBrJTlrZaDNg1pseD39jmuboHlO0n_mq_Yd33Xf3LrLnNFhifhAoxN73g_X2KCQE4iUDAt2qBr8WiO7GKsBtt_u8Aw" />
+                <div class="fd-hero-frame-bar" aria-hidden="true">
+                  <span
+                    class="fd-hero-frame-dot"
+                    style="background-color: var(--fd-error)"
+                  ></span
+                  ><span
+                    class="fd-hero-frame-dot"
+                    style="background-color: var(--fd-secondary-container)"
+                  ></span
+                  ><span
+                    class="fd-hero-frame-dot"
+                    style="background-color: var(--fd-tertiary-container)"
+                  ></span>
+                </div>
+                <img
+                  alt="Frontdesk dashboard showing gym activity and membership information"
+                  class="w-100 h-auto"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Jt7p8RRpcRw1gIGulujtrq5g1FV_fR4xbkwcqGpM9Yz9EOLAoafpFd1BzX3KR2cToskiUX3RqrY9kOujPZaJZLsh_cQnSICRkroi1FWAi5F85RgiEazRLyW3XPxAoopMk2P88K0ImJHUw7ukuXTt0Bw30uB5Fqk6Ro_UyG_BlBrJTlrZaDNg1pseD39jmuboHlO0n_mq_Yd33Xf3LrLnNFhifhAoxN73g_X2KCQE4iUDAt2qBr8WiO7GKsBtt_u8Aw"
+                />
               </div>
             </div>
           </div>
@@ -56,41 +125,76 @@
       </section>
 
       <!-- Reusable feature-card ticker: duplicate this section and change only its cards. -->
-      <section class="fd-feature-ticker fd-section" aria-labelledby="ticker-title">
-        <div class="container-xxl" style="max-width: 1120px">
+      <section
+        class="fd-feature-ticker fd-section"
+        aria-labelledby="ticker-title"
+      >
+        <div class="container-xxl" style="max-width: 1440px">
           <div class="fd-ticker-heading text-center">
             <p class="fd-eyebrow">Capabilities</p>
             <h2 id="ticker-title">Built for high-performance gym teams.</h2>
           </div>
-          <div class="fd-ticker-viewport" tabindex="0" aria-label="Feature cards that scroll continuously. Hover or focus to pause.">
+          <div
+            class="fd-ticker-viewport"
+            tabindex="0"
+            aria-label="Feature cards that scroll continuously. Hover or focus to pause."
+          >
             <div class="fd-ticker-track">
-            <div class="card-group fd-ticker-card-group">
-              <article class="card fd-ticker-card">
-                <div class="fd-ticker-icon fd-ticker-icon--blue"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
-                <h3>Member CRM</h3>
-                <p>See every plan, visit, note, and conversation in one profile.</p>
-              </article>
-              <article class="card fd-ticker-card">
-                <div class="fd-ticker-icon fd-ticker-icon--green"><i class="bi bi-calendar2-week-fill" aria-hidden="true"></i></div>
-                <h3>Smart scheduling</h3>
-                <p>Keep classes, capacity, instructors, and waitlists in sync.</p>
-              </article>
-              <article class="card fd-ticker-card">
-                <div class="fd-ticker-icon fd-ticker-icon--yellow"><i class="bi bi-credit-card-2-front-fill" aria-hidden="true"></i></div>
-                <h3>Simple payments</h3>
-                <p>Manage memberships, payment history, and follow-ups clearly.</p>
-              </article>
-              <article class="card fd-ticker-card">
-                <div class="fd-ticker-icon fd-ticker-icon--purple"><i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i></div>
-                <h3>Attendance insights</h3>
-                <p>Understand busy hours, member habits, and facility performance.</p>
-              </article>
-              <article class="card fd-ticker-card">
-                <div class="fd-ticker-icon fd-ticker-icon--coral"><i class="bi bi-person-workspace" aria-hidden="true"></i></div>
-                <h3>Staff operations</h3>
-                <p>Give your team the context they need for a smoother day.</p>
-              </article>
-            </div>
+              <div class="card-group fd-ticker-card-group">
+                <article class="card fd-ticker-card">
+                  <div class="fd-ticker-icon fd-ticker-icon--blue">
+                    <i class="bi bi-people-fill" aria-hidden="true"></i>
+                  </div>
+                  <h3>Member CRM</h3>
+                  <p>
+                    See every plan, visit, note, and conversation in one
+                    profile.
+                  </p>
+                </article>
+                <article class="card fd-ticker-card">
+                  <div class="fd-ticker-icon fd-ticker-icon--green">
+                    <i class="bi bi-calendar2-week-fill" aria-hidden="true"></i>
+                  </div>
+                  <h3>Smart scheduling</h3>
+                  <p>
+                    Keep classes, capacity, instructors, and waitlists in sync.
+                  </p>
+                </article>
+                <article class="card fd-ticker-card">
+                  <div class="fd-ticker-icon fd-ticker-icon--yellow">
+                    <i
+                      class="bi bi-credit-card-2-front-fill"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <h3>Simple payments</h3>
+                  <p>
+                    Manage memberships, payment history, and follow-ups clearly.
+                  </p>
+                </article>
+                <article class="card fd-ticker-card">
+                  <div class="fd-ticker-icon fd-ticker-icon--purple">
+                    <i
+                      class="bi bi-clipboard2-pulse-fill"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <h3>Attendance insights</h3>
+                  <p>
+                    Understand busy hours, member habits, and facility
+                    performance.
+                  </p>
+                </article>
+                <article class="card fd-ticker-card">
+                  <div class="fd-ticker-icon fd-ticker-icon--coral">
+                    <i class="bi bi-person-workspace" aria-hidden="true"></i>
+                  </div>
+                  <h3>Staff operations</h3>
+                  <p>
+                    Give your team the context they need for a smoother day.
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -98,54 +202,407 @@
 
       <section class="fd-section fd-platform" aria-labelledby="platform-title">
         <div class="container-xxl" style="max-width: 1220px">
-          <div class="fd-section-intro text-center"><p class="fd-eyebrow">One connected platform</p><h2 id="platform-title">The work behind a great member experience.</h2><p>Keep the moving parts of your facility in one clear, dependable system.</p></div>
-          <div class="fd-feature-controller" role="tablist" aria-label="Platform feature categories">
-            <button class="fd-feature-tab is-active" type="button" role="tab" id="membership-tab" aria-controls="membership-panel" aria-selected="true" data-slide="0">Memberships</button>
-            <button class="fd-feature-tab" type="button" role="tab" id="schedule-tab" aria-controls="schedule-panel" aria-selected="false" data-slide="1" tabindex="-1">Scheduling</button>
-            <button class="fd-feature-tab" type="button" role="tab" id="revenue-tab" aria-controls="revenue-panel" aria-selected="false" data-slide="2" tabindex="-1">Revenue</button>
+          <div class="fd-section-intro text-center">
+            <p class="fd-eyebrow">One connected platform</p>
+            <h2 id="platform-title">
+              The work behind a great member experience.
+            </h2>
+            <p>
+              Keep the moving parts of your facility in one clear, dependable
+              system.
+            </p>
+          </div>
+          <div
+            class="fd-feature-controller"
+            role="tablist"
+            aria-label="Platform feature categories"
+          >
+            <button
+              class="fd-feature-tab is-active"
+              type="button"
+              role="tab"
+              id="membership-tab"
+              aria-controls="membership-panel"
+              aria-selected="true"
+              data-slide="0"
+            >
+              Memberships
+            </button>
+            <button
+              class="fd-feature-tab"
+              type="button"
+              role="tab"
+              id="schedule-tab"
+              aria-controls="schedule-panel"
+              aria-selected="false"
+              data-slide="1"
+              tabindex="-1"
+            >
+              Scheduling
+            </button>
+            <button
+              class="fd-feature-tab"
+              type="button"
+              role="tab"
+              id="revenue-tab"
+              aria-controls="revenue-panel"
+              aria-selected="false"
+              data-slide="2"
+              tabindex="-1"
+            >
+              Revenue
+            </button>
           </div>
           <div class="fd-feature-carousel">
-            <article class="fd-feature-slide is-active" id="membership-panel" role="tabpanel" aria-labelledby="membership-tab">
-              <div class="fd-feature-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">groups</span>Member management</p><h3>Every member relationship, at a glance.</h3><p>Give your team the full picture at check-in—from membership status to recent visits and open requests.</p><ul class="fd-check-list"><li>Profiles, plans, waivers, and notes in one place</li><li>Fast check-ins for front-desk teams</li><li>Clear alerts when a member needs attention</li></ul><a class="fd-text-link" href="#features">See member tools <span aria-hidden="true">→</span></a></div>
-              <div class="fd-carousel-visual"><img src="images/feature-1.jpg" alt="Well-equipped modern gym floor" /><div class="fd-ui-card fd-ui-card--member" aria-hidden="true"><div class="fd-ui-card-head"><span class="fd-avatar">JL</span><span><strong>Jordan Lee</strong><small>Active member</small></span><span class="fd-ui-status">Checked in</span></div><div class="fd-ui-card-row"><span>Membership</span><strong>Unlimited</strong></div><div class="fd-ui-card-row"><span>Next class</span><strong>Strength · 6:00 PM</strong></div></div></div>
+            <article
+              class="fd-feature-slide is-active"
+              id="membership-panel"
+              role="tabpanel"
+              aria-labelledby="membership-tab"
+            >
+              <div class="fd-feature-copy">
+                <p class="fd-feature-kicker">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >groups</span
+                  >Member management
+                </p>
+                <h3>Every member relationship, at a glance.</h3>
+                <p>
+                  Give your team the full picture at check-in—from membership
+                  status to recent visits and open requests.
+                </p>
+                <ul class="fd-check-list">
+                  <li>Profiles, plans, waivers, and notes in one place</li>
+                  <li>Fast check-ins for front-desk teams</li>
+                  <li>Clear alerts when a member needs attention</li>
+                </ul>
+                <a class="fd-text-link" href="#features"
+                  >See member tools <span aria-hidden="true">→</span></a
+                >
+              </div>
+              <div class="fd-carousel-visual">
+                <img
+                  src="images/feature-1.jpg"
+                  alt="Well-equipped modern gym floor"
+                />
+                <div class="fd-ui-card fd-ui-card--member" aria-hidden="true">
+                  <div class="fd-ui-card-head">
+                    <span class="fd-avatar">JL</span
+                    ><span
+                      ><strong>Jordan Lee</strong
+                      ><small>Active member</small></span
+                    ><span class="fd-ui-status">Checked in</span>
+                  </div>
+                  <div class="fd-ui-card-row">
+                    <span>Membership</span><strong>Unlimited</strong>
+                  </div>
+                  <div class="fd-ui-card-row">
+                    <span>Next class</span><strong>Strength · 6:00 PM</strong>
+                  </div>
+                </div>
+              </div>
             </article>
-            <article class="fd-feature-slide" id="schedule-panel" role="tabpanel" aria-labelledby="schedule-tab" hidden>
-              <div class="fd-feature-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Class scheduling</p><h3>A schedule your members can rely on.</h3><p>Publish classes, manage capacity, and let members book the sessions that fit their routine.</p><ul class="fd-check-list"><li>Simple recurring sessions and instructor assignments</li><li>Capacity limits and automatic waitlists</li><li>Live booking visibility for your whole team</li></ul><a class="fd-text-link" href="#features">See scheduling tools <span aria-hidden="true">→</span></a></div>
-              <div class="fd-carousel-visual"><img src="images/feature-3.jpg" alt="Personal training session in a gym" /><div class="fd-ui-card fd-ui-card--schedule" aria-hidden="true"><p class="fd-ui-label">TODAY · TUESDAY</p><strong>Evening classes</strong><div class="fd-session"><b>5:30</b><span><strong>Strength Foundations</strong><small>12 / 16 booked</small></span></div><div class="fd-session"><b>6:30</b><span><strong>Mobility Flow</strong><small>8 / 12 booked</small></span></div></div></div>
+            <article
+              class="fd-feature-slide"
+              id="schedule-panel"
+              role="tabpanel"
+              aria-labelledby="schedule-tab"
+              hidden
+            >
+              <div class="fd-feature-copy">
+                <p class="fd-feature-kicker">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >calendar_month</span
+                  >Class scheduling
+                </p>
+                <h3>A schedule your members can rely on.</h3>
+                <p>
+                  Publish classes, manage capacity, and let members book the
+                  sessions that fit their routine.
+                </p>
+                <ul class="fd-check-list">
+                  <li>Simple recurring sessions and instructor assignments</li>
+                  <li>Capacity limits and automatic waitlists</li>
+                  <li>Live booking visibility for your whole team</li>
+                </ul>
+                <a class="fd-text-link" href="#features"
+                  >See scheduling tools <span aria-hidden="true">→</span></a
+                >
+              </div>
+              <div class="fd-carousel-visual">
+                <img
+                  src="images/feature-3.jpg"
+                  alt="Personal training session in a gym"
+                />
+                <div class="fd-ui-card fd-ui-card--schedule" aria-hidden="true">
+                  <p class="fd-ui-label">TODAY · TUESDAY</p>
+                  <strong>Evening classes</strong>
+                  <div class="fd-session">
+                    <b>5:30</b
+                    ><span
+                      ><strong>Strength Foundations</strong
+                      ><small>12 / 16 booked</small></span
+                    >
+                  </div>
+                  <div class="fd-session">
+                    <b>6:30</b
+                    ><span
+                      ><strong>Mobility Flow</strong
+                      ><small>8 / 12 booked</small></span
+                    >
+                  </div>
+                </div>
+              </div>
             </article>
-            <article class="fd-feature-slide" id="revenue-panel" role="tabpanel" aria-labelledby="revenue-tab" hidden>
-              <div class="fd-feature-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">payments</span>Payments &amp; reporting</p><h3>Know what is driving your business forward.</h3><p>Make payments easy for members and give your team a clear view of the numbers that matter.</p><ul class="fd-check-list"><li>Membership billing and payment history</li><li>Follow-up queues for failed payments</li><li>Practical reports for daily decisions</li></ul><a class="fd-text-link" href="#features">See revenue tools <span aria-hidden="true">→</span></a></div>
-              <div class="fd-carousel-visual"><img src="images/feature-4.jpg" alt="Gym member training with a medicine ball" /><div class="fd-ui-card fd-ui-card--revenue" aria-hidden="true"><p class="fd-ui-label">THIS MONTH</p><strong class="fd-revenue-value">$24,860</strong><small>Collected revenue</small><div class="fd-bar-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="fd-growth">↑ 12.4% from last month</span></div></div>
+            <article
+              class="fd-feature-slide"
+              id="revenue-panel"
+              role="tabpanel"
+              aria-labelledby="revenue-tab"
+              hidden
+            >
+              <div class="fd-feature-copy">
+                <p class="fd-feature-kicker">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >payments</span
+                  >Payments &amp; reporting
+                </p>
+                <h3>Know what is driving your business forward.</h3>
+                <p>
+                  Make payments easy for members and give your team a clear view
+                  of the numbers that matter.
+                </p>
+                <ul class="fd-check-list">
+                  <li>Membership billing and payment history</li>
+                  <li>Follow-up queues for failed payments</li>
+                  <li>Practical reports for daily decisions</li>
+                </ul>
+                <a class="fd-text-link" href="#features"
+                  >See revenue tools <span aria-hidden="true">→</span></a
+                >
+              </div>
+              <div class="fd-carousel-visual">
+                <img
+                  src="images/feature-4.jpg"
+                  alt="Gym member training with a medicine ball"
+                />
+                <div class="fd-ui-card fd-ui-card--revenue" aria-hidden="true">
+                  <p class="fd-ui-label">THIS MONTH</p>
+                  <strong class="fd-revenue-value">$24,860</strong
+                  ><small>Collected revenue</small>
+                  <div class="fd-bar-chart">
+                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <span class="fd-growth">↑ 12.4% from last month</span>
+                </div>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="fd-section fd-showcase" id="features" aria-labelledby="showcase-title">
+      <section
+        class="fd-section fd-showcase"
+        id="features"
+        aria-labelledby="showcase-title"
+      >
         <div class="container-xxl" style="max-width: 1220px">
-          <div class="fd-section-intro text-center"><p class="fd-eyebrow">Built for the day-to-day</p><h2 id="showcase-title">Everything you need to run a more connected gym.</h2><p>Practical tools for the moments that keep your facility moving.</p></div>
+          <div class="fd-section-intro text-center">
+            <p class="fd-eyebrow">Built for the day-to-day</p>
+            <h2 id="showcase-title">
+              Everything you need to run a more connected gym.
+            </h2>
+            <p>
+              Practical tools for the moments that keep your facility moving.
+            </p>
+          </div>
           <article class="fd-showcase-row">
-            <div class="fd-showcase-media"><img src="images/feature-2.jpg" alt="Gym member running on a treadmill" loading="lazy" /><div class="fd-preview-card" aria-hidden="true"><div class="fd-preview-card-top"><span class="material-symbols-outlined">calendar_today</span><span>Today’s schedule</span></div><strong>18 sessions</strong><small>3 instructors · 4 rooms</small><div class="fd-preview-progress"><i></i></div></div></div>
-            <div class="fd-showcase-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Scheduling that stays in sync</p><h3>Make it easy to find, book, and fill every class.</h3><p>Your schedule works for the people running it and the people booking it. Keep availability current without juggling separate calendars.</p><ul class="fd-check-list"><li>Create recurring classes in minutes</li><li>Set capacity limits and manage waitlists</li><li>Give instructors the context they need</li></ul><a class="fd-text-link" href="#pricing">Learn more <span aria-hidden="true">→</span></a></div>
+            <div class="fd-showcase-media">
+              <img
+                src="images/feature-2.jpg"
+                alt="Gym member running on a treadmill"
+                loading="lazy"
+              />
+              <div class="fd-preview-card" aria-hidden="true">
+                <div class="fd-preview-card-top">
+                  <span class="material-symbols-outlined">calendar_today</span
+                  ><span>Today’s schedule</span>
+                </div>
+                <strong>18 sessions</strong
+                ><small>3 instructors · 4 rooms</small>
+                <div class="fd-preview-progress"><i></i></div>
+              </div>
+            </div>
+            <div class="fd-showcase-copy">
+              <p class="fd-feature-kicker">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >calendar_month</span
+                >Scheduling that stays in sync
+              </p>
+              <h3>Make it easy to find, book, and fill every class.</h3>
+              <p>
+                Your schedule works for the people running it and the people
+                booking it. Keep availability current without juggling separate
+                calendars.
+              </p>
+              <ul class="fd-check-list">
+                <li>Create recurring classes in minutes</li>
+                <li>Set capacity limits and manage waitlists</li>
+                <li>Give instructors the context they need</li>
+              </ul>
+              <a class="fd-text-link" href="#pricing"
+                >Learn more <span aria-hidden="true">→</span></a
+              >
+            </div>
           </article>
           <article class="fd-showcase-row fd-showcase-row--reverse">
-            <div class="fd-showcase-media"><img src="images/feature-3.jpg" alt="Trainer coaching a member during a strength session" loading="lazy" /><div class="fd-preview-card fd-preview-card--attendance" aria-hidden="true"><div class="fd-preview-card-top"><span class="material-symbols-outlined">how_to_reg</span><span>Check-in activity</span></div><strong>42 members</strong><small>Checked in today</small><div class="fd-attendance-list"><i></i><i></i><i></i><b>+12</b></div></div></div>
-            <div class="fd-showcase-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">how_to_reg</span>Confident front-desk moments</p><h3>Turn every arrival into a warm welcome.</h3><p>Give staff the right member details before a question becomes a queue, from plan access to notes and unpaid balances.</p><ul class="fd-check-list"><li>Fast, clear check-in workflows</li><li>Access to membership and payment details</li><li>Attendance history for every member</li></ul><a class="fd-text-link" href="#pricing">Learn more <span aria-hidden="true">→</span></a></div>
+            <div class="fd-showcase-media">
+              <img
+                src="images/feature-3.jpg"
+                alt="Trainer coaching a member during a strength session"
+                loading="lazy"
+              />
+              <div
+                class="fd-preview-card fd-preview-card--attendance"
+                aria-hidden="true"
+              >
+                <div class="fd-preview-card-top">
+                  <span class="material-symbols-outlined">how_to_reg</span
+                  ><span>Check-in activity</span>
+                </div>
+                <strong>42 members</strong><small>Checked in today</small>
+                <div class="fd-attendance-list">
+                  <i></i><i></i><i></i><b>+12</b>
+                </div>
+              </div>
+            </div>
+            <div class="fd-showcase-copy">
+              <p class="fd-feature-kicker">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >how_to_reg</span
+                >Confident front-desk moments
+              </p>
+              <h3>Turn every arrival into a warm welcome.</h3>
+              <p>
+                Give staff the right member details before a question becomes a
+                queue, from plan access to notes and unpaid balances.
+              </p>
+              <ul class="fd-check-list">
+                <li>Fast, clear check-in workflows</li>
+                <li>Access to membership and payment details</li>
+                <li>Attendance history for every member</li>
+              </ul>
+              <a class="fd-text-link" href="#pricing"
+                >Learn more <span aria-hidden="true">→</span></a
+              >
+            </div>
           </article>
           <article class="fd-showcase-row">
-            <div class="fd-showcase-media"><img src="images/feature-4.jpg" alt="Member doing a functional fitness workout" loading="lazy" /><div class="fd-preview-card fd-preview-card--revenue" aria-hidden="true"><div class="fd-preview-card-top"><span class="material-symbols-outlined">monitoring</span><span>Revenue overview</span></div><strong>$24,860</strong><small>Collected this month</small><div class="fd-sparkline"><svg viewBox="0 0 160 42" preserveAspectRatio="none"><polyline points="0,34 24,28 46,30 70,15 92,23 114,11 136,16 160,4"></polyline></svg></div></div></div>
-            <div class="fd-showcase-copy"><p class="fd-feature-kicker"><span class="material-symbols-outlined" aria-hidden="true">insights</span>Better visibility, fewer surprises</p><h3>Keep a clear view of the health of your business.</h3><p>See the information you need to make confident decisions, without spending your afternoon reconciling reports.</p><ul class="fd-check-list"><li>Monitor payments and outstanding balances</li><li>Follow membership growth and attendance trends</li><li>Share clear reports with owners and managers</li></ul><a class="fd-text-link" href="#pricing">Learn more <span aria-hidden="true">→</span></a></div>
+            <div class="fd-showcase-media">
+              <img
+                src="images/feature-4.jpg"
+                alt="Member doing a functional fitness workout"
+                loading="lazy"
+              />
+              <div
+                class="fd-preview-card fd-preview-card--revenue"
+                aria-hidden="true"
+              >
+                <div class="fd-preview-card-top">
+                  <span class="material-symbols-outlined">monitoring</span
+                  ><span>Revenue overview</span>
+                </div>
+                <strong>$24,860</strong><small>Collected this month</small>
+                <div class="fd-sparkline">
+                  <svg viewBox="0 0 160 42" preserveAspectRatio="none">
+                    <polyline
+                      points="0,34 24,28 46,30 70,15 92,23 114,11 136,16 160,4"
+                    ></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="fd-showcase-copy">
+              <p class="fd-feature-kicker">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >insights</span
+                >Better visibility, fewer surprises
+              </p>
+              <h3>Keep a clear view of the health of your business.</h3>
+              <p>
+                See the information you need to make confident decisions,
+                without spending your afternoon reconciling reports.
+              </p>
+              <ul class="fd-check-list">
+                <li>Monitor payments and outstanding balances</li>
+                <li>Follow membership growth and attendance trends</li>
+                <li>Share clear reports with owners and managers</li>
+              </ul>
+              <a class="fd-text-link" href="#pricing"
+                >Learn more <span aria-hidden="true">→</span></a
+              >
+            </div>
           </article>
         </div>
       </section>
 
       <section class="fd-section fd-cta-section" id="pricing">
-        <div class="container-xxl text-center" style="max-width: 840px"><p class="fd-eyebrow">Ready when you are</p><h2>Spend less time managing your gym.</h2><p class="fs-5 text-fd-on-surface-variant mb-4">Bring your memberships, schedules, payments, and team into one easier way of working.</p><div class="d-flex justify-content-center flex-wrap gap-3"><a class="btn-fd-primary" href="#">Get Started</a><a class="btn-fd-outline" href="#">Talk to Sales</a></div></div>
+        <div class="container-xxl text-center" style="max-width: 840px">
+          <p class="fd-eyebrow">Ready when you are</p>
+          <h2>Spend less time managing your gym.</h2>
+          <p class="fs-5 text-fd-on-surface-variant mb-4">
+            Bring your memberships, schedules, payments, and team into one
+            easier way of working.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a class="btn-fd-primary" href="#">Get Started</a
+            ><a class="btn-fd-outline" href="#">Talk to Sales</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="fd-footer py-5 px-3 px-md-5" id="resources">
-      <div class="container-xxl" style="max-width: 1440px"><div class="row g-4"><div class="col-6 col-lg-4"><a class="text-fd-primary fw-bold fs-5 d-flex align-items-center gap-2 mb-2 text-decoration-none" href="#product">Frontdesk</a><p class="small text-fd-on-surface-variant mb-2" style="max-width: 20rem">Empowering modern facilities with intelligent operational tools.</p><p class="small text-fd-on-surface-variant mb-0">© 2026 Frontdesk Operations Inc. All rights reserved.</p></div><div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2"><h4>Product</h4><a class="small" href="#features">Features</a><a class="small" href="#pricing">Pricing</a></div><div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2"><h4>Resources</h4><a class="small" href="#">Documentation</a><a class="small" href="#">Blog</a></div><div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2"><h4>Company</h4><a class="small" href="#">Privacy Policy</a><a class="small" href="#">Terms of Service</a></div><div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2"><h4>Support</h4><a class="small" href="#">Contact Support</a><a class="small" href="#">Status</a></div></div></div>
+      <div class="container-xxl" style="max-width: 1440px">
+        <div class="row g-4">
+          <div class="col-6 col-lg-4">
+            <a
+              class="text-fd-primary fw-bold fs-5 d-flex align-items-center gap-2 mb-2 text-decoration-none"
+              href="#product"
+              >Frontdesk</a
+            >
+            <p
+              class="small text-fd-on-surface-variant mb-2"
+              style="max-width: 20rem"
+            >
+              Empowering modern facilities with intelligent operational tools.
+            </p>
+            <p class="small text-fd-on-surface-variant mb-0">
+              © 2026 Frontdesk Operations Inc. All rights reserved.
+            </p>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2">
+            <h4>Product</h4>
+            <a class="small" href="#features">Features</a
+            ><a class="small" href="#pricing">Pricing</a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2">
+            <h4>Resources</h4>
+            <a class="small" href="#">Documentation</a
+            ><a class="small" href="#">Blog</a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2">
+            <h4>Company</h4>
+            <a class="small" href="#">Privacy Policy</a
+            ><a class="small" href="#">Terms of Service</a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 d-flex flex-column gap-2">
+            <h4>Support</h4>
+            <a class="small" href="#">Contact Support</a
+            ><a class="small" href="#">Status</a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
