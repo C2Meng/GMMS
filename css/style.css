@@ -1386,17 +1386,39 @@ body {
 }
 
 /* Plans readability scale */
-.fd-list-heading h1 { font-size: 1.5rem; }
-.fd-list-count { font-size: 0.85rem; }
-.fd-list-search { height: 2.5rem; }
-.fd-list-search .bi { font-size: 0.95rem; }
-.fd-list-search input { font-size: 0.9rem; }
-.fd-list-add { font-size: 0.9rem; }
-.fd-list-table { font-size: 0.8rem; }
+.fd-list-heading h1 {
+  font-size: 1.5rem;
+}
+.fd-list-count {
+  font-size: 0.85rem;
+}
+.fd-list-search {
+  height: 2.5rem;
+}
+.fd-list-search .bi {
+  font-size: 0.95rem;
+}
+.fd-list-search input {
+  font-size: 0.9rem;
+}
+.fd-list-add {
+  font-size: 0.9rem;
+}
+.fd-list-table {
+  font-size: 0.8rem;
+}
 .fd-list-table th,
-.fd-list-table td { height: 48px; padding: 0.7rem 0.8rem; }
-.fd-list-table thead th { height: 42px; font-size: 0.65rem; }
-.fd-list-action-button { font-size: 0.85rem; }
+.fd-list-table td {
+  height: 48px;
+  padding: 0.7rem 0.8rem;
+}
+.fd-list-table thead th {
+  height: 42px;
+  font-size: 0.65rem;
+}
+.fd-list-action-button {
+  font-size: 0.85rem;
+}
 
 /* Readability scale for legacy member and session list pages. */
 .fd-readable-list .fd-card {
