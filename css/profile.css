@@ -265,3 +265,250 @@ body {
     padding: var(--fd-space-sm);
   }
 }
+
+/* =========================================================
+   Staff Profile — additive extension.
+   Reuses .mp-page, .mp-name and .mp-badge* as-is. Everything
+   below is new: the cover banner, the stacked staff info
+   rows (icon above a label+value pair, rather than the
+   member-profile's icon-left/value-right row), the upcoming
+   session list, and the performance metric charts.
+   ========================================================= */
+
+.sp-cover {
+  position: relative;
+  height: 6.5rem;
+  overflow: hidden;
+}
+.sp-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.sp-edit-btn {
+  position: absolute;
+  top: var(--fd-space-sm);
+  right: var(--fd-space-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--fd-primary-container);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border: none;
+  border-radius: var(--fd-radius-full);
+  padding: 0.55rem 1.1rem;
+  box-shadow: 0 6px 16px rgba(0, 153, 255, 0.3);
+  cursor: pointer;
+}
+.sp-edit-btn:hover {
+  filter: brightness(1.05);
+}
+
+.sp-content {
+  margin-top: -2.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Staff card head */
+.sp-avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: var(--fd-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 18px rgba(0, 153, 255, 0.35);
+}
+.sp-avatar .material-symbols-outlined {
+  font-size: 2.3rem;
+  color: #ffffff;
+}
+
+.sp-card-head {
+  text-align: center;
+  margin-bottom: var(--fd-space-sm);
+}
+.sp-card-head .mp-name {
+  margin-top: var(--fd-space-xs);
+  margin-bottom: 0.5rem;
+}
+
+/* Stacked info rows: icon, then label above value */
+.sp-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.sp-info-row .material-symbols-outlined {
+  font-size: 1.15rem;
+  color: var(--fd-on-surface-variant);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+.sp-info-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fd-on-surface-variant);
+  margin-bottom: 0.15rem;
+}
+.sp-info-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--fd-on-surface);
+}
+
+/* Upcoming Session list */
+.sp-section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--fd-on-surface);
+  margin-bottom: var(--fd-space-sm);
+}
+
+.sp-mono {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.03em;
+}
+
+.sp-session-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.sp-session-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0.25rem;
+}
+.sp-session-tag {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sp-session-tag.is-appointment {
+  color: var(--fd-primary);
+}
+.sp-session-tag.is-class {
+  color: var(--fd-tertiary);
+}
+.sp-session-desc {
+  font-size: 0.9rem;
+  color: var(--fd-on-surface);
+}
+.sp-session-time {
+  font-size: 0.8rem;
+  color: var(--fd-on-surface-variant);
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+/* Performance Metric */
+.sp-perf-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--fd-space-sm);
+}
+.sp-perf-nav {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--fd-primary-container);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 153, 255, 0.3);
+}
+.sp-perf-nav:hover {
+  filter: brightness(1.05);
+}
+.sp-perf-nav .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.sp-perf-charts {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--fd-space-sm);
+  min-width: 0;
+}
+
+.sp-chart-card {
+  border: 1px solid var(--fd-on-surface-variant);
+  border-radius: var(--fd-radius);
+  padding: 0.6rem 0.75rem 0.5rem;
+  min-width: 0;
+}
+.sp-chart-title {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--fd-on-surface);
+  margin-bottom: 0.35rem;
+}
+.sp-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sp-chart-caption {
+  font-size: 0.78rem;
+  color: var(--fd-on-surface);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.sp-chart-delta {
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--fd-tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.sp-chart-delta .material-symbols-outlined {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+  .sp-perf-charts {
+    grid-template-columns: 1fr;
+  }
+  .sp-perf-nav {
+    display: none;
+  }
+  .sp-content {
+    margin-top: -1.75rem;
+  }
+  .sp-session-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .sp-session-time {
+    text-align: left;
+  }
+}
