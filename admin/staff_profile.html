@@ -27,6 +27,7 @@
 
     <!-- Shared design system stylesheet -->
     <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/dashboard.css" rel="stylesheet" />
     <!-- Page-specific additive styles (member + staff profile) -->
     <link href="../css/profile.css" rel="stylesheet" />
   </head>
@@ -41,40 +42,52 @@
         <!-- Left: Staff card -->
         <div class="col-12 col-lg-4 col-xl-3">
           <div class="fd-card no-hover h-100">
-            <div class="sp-card-head">
+            <div class="d-flex align-items-center gap-3 mb-4">
               <div class="sp-avatar">
                 <span class="material-symbols-outlined fill">person</span>
               </div>
-              <div class="mp-name">Jane Doe</div>
-              <span class="mp-badge mp-badge-success">Active</span>
+              <div class="sp-profile-details">
+                <div class="mp-name">Jane Doe</div>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="mp-badge mp-badge-success">Active</span>
+                </div>
+              </div>
             </div>
 
             <div>
               <div class="sp-info-row">
-                <span class="material-symbols-outlined">badge</span>
-                <div>
-                  <div class="sp-info-label">Staff ID</div>
+                <div class="sp-info-details">
+                  <div class="sp-info-heading">
+                    <span class="material-symbols-outlined">badge</span>
+                    <div class="sp-info-label">Staff ID</div>
+                  </div>
                   <div class="sp-info-value">STAFF001</div>
                 </div>
               </div>
               <div class="sp-info-row">
-                <span class="material-symbols-outlined">work</span>
-                <div>
-                  <div class="sp-info-label">Role</div>
+                <div class="sp-info-details">
+                  <div class="sp-info-heading">
+                    <span class="material-symbols-outlined">work</span>
+                    <div class="sp-info-label">Role</div>
+                  </div>
                   <div class="sp-info-value">Trainer</div>
                 </div>
               </div>
               <div class="sp-info-row">
-                <span class="material-symbols-outlined">mail</span>
-                <div>
-                  <div class="sp-info-label">Email</div>
+                <div class="sp-info-details">
+                  <div class="sp-info-heading">
+                    <span class="material-symbols-outlined">mail</span>
+                    <div class="sp-info-label">Email</div>
+                  </div>
                   <div class="sp-info-value">johndoe@gmail.com</div>
                 </div>
               </div>
               <div class="sp-info-row" style="border-bottom: none">
-                <span class="material-symbols-outlined">call</span>
-                <div>
-                  <div class="sp-info-label">Phone</div>
+                <div class="sp-info-details">
+                  <div class="sp-info-heading">
+                    <span class="material-symbols-outlined">call</span>
+                    <div class="sp-info-label">Phone</div>
+                  </div>
                   <div class="sp-info-value">0123456789</div>
                 </div>
               </div>
@@ -477,5 +490,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin_sidebar.js"></script>
   </body>
 </html>

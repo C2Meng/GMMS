@@ -39,6 +39,64 @@ body {
     top: 0;
     height: 100vh;
   }
+
+  .admin-page {
+    padding-left: 15rem;
+  }
+
+  .db-admin-sidebar {
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+/* Shared admin page layout. List content fills the space beside the sidebar. */
+.admin-page > .container-fluid,
+.admin-page > div > .container-fluid,
+.admin-page .sc-page {
+  width: 100%;
+  max-width: none;
+}
+
+.admin-page.fd-readable-list .fd-card {
+  width: 100%;
+  max-width: none !important;
+}
+
+.admin-page.fd-readable-list .table-responsive,
+.admin-page.fd-readable-list .responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-page.fd-readable-list .table {
+  width: 100%;
+  min-width: 720px;
+}
+
+@media (max-width: 767.98px) {
+  .admin-page {
+    padding-left: 0;
+  }
+
+  .admin-page > .container-fluid,
+  .admin-page > div > .container-fluid,
+  .admin-page .sc-page {
+    padding-left: var(--fd-space-sm) !important;
+    padding-right: var(--fd-space-sm) !important;
+  }
+
+  .admin-page.fd-readable-list .fd-card {
+    min-height: calc(100vh - 2rem);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .admin-page {
+    padding-left: 0;
+  }
 }
 
 .db-sidebar-body {
@@ -62,6 +120,7 @@ body {
   border: none;
   border-radius: var(--fd-radius-lg);
   padding: 0.7rem 1rem;
+  text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 97, 165, 0.25);
   transition:
     transform 0.2s ease,
