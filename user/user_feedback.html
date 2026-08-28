@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- Global CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     
     <!-- Feedback Page CSS -->
-    <link href="css/feedback.css" rel="stylesheet">
+    <link href="../css/user/user_feedback.css" rel="stylesheet">
 </head>
 <body class="app-body">
 
@@ -29,15 +29,17 @@
         <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
             <div class="d-flex align-items-center gap-2">
                 <a href="user_dashboard.html">
-                    <img src="images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
                 </a>
                 <span class="app-header-username">Username</span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
-                    Active <i class="bi bi-gear"></i>
-                </span>
-                <a href="qr-scanner.html" class="text-decoration-none">
+                <a href="user_profile.html">
+                    <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                        Active <i class="bi bi-person-circle"></i>
+                    </span>
+                </a>
+                <a href="user_attendance_qr.html" class="text-decoration-none">
                     <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
                 </a>
             </div>
@@ -64,7 +66,7 @@
 
                 <!-- Center Icon -->
                 <div class="text-center mb-4">
-                    <img src="images/feedback.png" alt="Feedback Icon" class="img-fluid" style="width: 100px;">
+                    <img src="../images/feedback.png" alt="Feedback Icon" class="img-fluid" style="width: 100px;">
                 </div>
             </div>
 
@@ -172,6 +174,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Global Custom Script -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

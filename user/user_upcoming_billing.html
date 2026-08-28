@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- Global CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body class="app-body">
 
@@ -26,15 +26,17 @@
         <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
             <div class="d-flex align-items-center gap-2">
                 <a href="user_dashboard.html">
-                    <img src="images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
                 </a>
                 <span class="app-header-username">Username</span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
-                    Active <i class="bi bi-gear"></i>
-                </span>
-                <a href="qr-scanner.html" class="text-decoration-none">
+                    <a href="user_profile.html">
+                        <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                            Active <i class="bi bi-person-circle"></i>
+                        </span>
+                    </a>
+                    <a href="user_attendance_qr.html" class="text-decoration-none">
                     <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
                 </a>
             </div>
@@ -49,7 +51,7 @@
             </div>
 
             <div class="px-3 pb-3">
-                <h3 class="fw-bold mb-4" style="font-size: 1.3rem;">Upcoming Billing and History</h3>
+                <h3 class="fw-bold mb-4" style="font-size: 1.25rem;">Upcoming Billing and History</h3>
 
                 <!-- Blue Billing Banner -->
                 <div class="card border border-dark shadow-sm rounded-3 overflow-hidden mb-4" style="background-color: #72C3F0;">
@@ -60,7 +62,7 @@
                         </div>
                         
                         <!-- Pay Now Button -->
-                        <a href="order_summary.html" class="btn bg-white text-dark fw-bold position-absolute shadow-sm" style="top: 1.25rem; right: 1rem; font-size: 0.75rem; border-radius: 0.35rem; padding: 0.3rem 0.75rem;">Pay now</a>
+                        <a href="user_order_summary.html" class="btn bg-white text-dark fw-bold position-absolute shadow-sm" style="top: 1.25rem; right: 1rem; font-size: 0.75rem; border-radius: 0.35rem; padding: 0.3rem 0.75rem;">Pay now</a>
                         
                         <div class="text-dark fw-bold" style="font-size: 0.75rem;">
                             Next Billing Date: 3-Sep-2026
@@ -70,7 +72,7 @@
 
                 <!-- Billing Structure Table -->
                 <div class="app-table-title">Billing Structure</div>
-                <table class="app-table border rounded-3 overflow-hidden w-100 mb-4">
+                <table class="app-table shadow-sm rounded-3 overflow-hidden w-100 mb-4">
                     <tbody>
                         <tr>
                             <td>Membership</td>
@@ -125,6 +127,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Global Custom Script -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

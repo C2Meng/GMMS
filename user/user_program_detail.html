@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Details - Gym System</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Global CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+<body class="app-body">
+
+    <!-- White Mask Overlay for Background -->
+    <div class="app-mask"></div>
+
+    <!-- Central Mobile Frame -->
+    <div class="mobile-frame shadow-lg d-flex flex-column bg-white">
+        
+        <!-- Global Header -->
+        <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_dashboard.html">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                </a>
+                <span class="app-header-username">Username</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_profile.html">
+                    <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                        Active <i class="bi bi-person-circle"></i>
+                    </span>
+                </a>
+                <a href="user_attendance_qr.html" class="text-decoration-none">
+                    <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area (Scrollable) -->
+        <div class="frame-content pb-4 flex-grow-1 overflow-auto">
+            
+            <!-- Global Breadcrumb -->
+            <div class="app-breadcrumb">
+                <a href="user_dashboard.html">Dashboard</a> &gt; <a href="user_program_listing.html">Book Class</a> &gt; Pro Athlete
+            </div>
+
+            <!-- Page Content -->
+            <div class="px-3 pb-4">
+                
+                <!-- Hero Image -->
+                <img src="../images/program-1.jpg" alt="Pro Athlete" class="img-fluid rounded-4 mb-3 w-100" style="object-fit: cover; height: 180px;">
+
+                <!-- Title & Description -->
+                <h3 class="fw-bold mb-1">Pro Athlete</h3>
+                <p class="text-muted fw-bold mb-4" style="font-size: 0.8rem; line-height: 1.3;">
+                    Designed for serious fitness enthusiasts and athletes.
+                </p>
+
+                <p class="fw-bold text-dark mb-3" style="font-size: 0.8rem;">
+                    Package Start date : 03-Nov-2026
+                </p>
+
+                <!-- Fee & Charges Table -->
+                <div class="app-table-title">Fee & Charges:</div>
+                <table class="app-table shadow-sm rounded-3 overflow-hidden">
+                    <tbody>
+                        <tr>
+                            <td>Subscription Fee</td>
+                            <td>Rm639 ( + Plan 8%) every 3 Month for 5 Times</td>
+                        </tr>
+                        <tr>
+                            <td>Locker Rental</td>
+                            <td>Rm 10.00</td>
+                        </tr>
+                        <tr>
+                            <td>Joining Fee</td>
+                            <td>Rm 5.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Included Benefits Table -->
+                <div class="app-table-title">Included Benefits</div>
+                <table class="app-table shadow-sm rounded-3 overflow-hidden">
+                    <tbody>
+                        <tr>
+                            <td>Personal Training Session</td>
+                            <td>Rm639 ( + Plan 8%) every 3 Month for 5 Times</td>
+                        </tr>
+                        <tr>
+                            <td>Nutrition Guidance</td>
+                            <td>Rm 10.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Action Buttons -->
+                <div class="d-flex flex-column gap-2 mt-4 pt-2">
+                    <!-- Triggers Modal -->
+                    <button type="button" class="btn-app-outline w-100" data-bs-toggle="modal" data-bs-target="#customizeModal">Customize</button>
+                    <!-- Fixed invalid HTML nesting (<a> surrounding <button>) -->
+                    <a href="user_order_summary.html" class="btn-app-primary w-100 text-decoration-none text-center d-flex justify-content-center align-items-center">Join Now</a>
+                </div>
+
+            </div> <!-- End Page Content -->
+            
+        </div> 
+    </div> 
+
+    <!-- Customize Schedule Modal -->
+    <div class="modal fade" id="customizeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable px-3">
+            <div class="modal-content border-0 shadow rounded-4">
+                
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold" style="font-size: 1.1rem;">Available Sessions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body pb-2">
+                    <p class="text-muted mb-4" style="font-size: 0.75rem;">Select your preferred dates and time slots for the program.</p>
+                    
+                    <!-- Date Group 1 -->
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-calendar-check fs-5 text-dark"></i>
+                            <h6 class="fw-bold text-dark mb-0" style="font-size: 0.9rem;">1-Aug-2026</h6>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 ps-1">
+                            <input type="checkbox" class="btn-check" id="slot-1-1" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-1-1">8.00am - 9.00am</label>
+                            
+                            <input type="checkbox" class="btn-check" id="slot-1-2" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-1-2">10.00am - 11.00am</label>
+                        </div>
+                    </div>
+
+                    <!-- Date Group 2 -->
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-calendar-check fs-5 text-dark"></i>
+                            <h6 class="fw-bold text-dark mb-0" style="font-size: 0.9rem;">2-Aug-2026</h6>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 ps-1">
+                            <input type="checkbox" class="btn-check" id="slot-2-1" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-2-1">9.00am - 10.00am</label>
+                            
+                            <input type="checkbox" class="btn-check" id="slot-2-2" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-2-2">2.00pm - 3.00pm</label>
+
+                            <input type="checkbox" class="btn-check" id="slot-2-3" autocomplete="off" disabled>
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-2-3">5.00pm - 6.00pm (Full)</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group 3 -->
+                    <div class="mb-2">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-calendar-check fs-5 text-dark"></i>
+                            <h6 class="fw-bold text-dark mb-0" style="font-size: 0.9rem;">5-Aug-2026</h6>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 ps-1">
+                            <input type="checkbox" class="btn-check" id="slot-3-1" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-3-1">8.00am - 9.00am</label>
+                            
+                            <input type="checkbox" class="btn-check" id="slot-3-2" autocomplete="off">
+                            <label class="btn rounded-pill fw-bold px-3 py-2 time-slot-label" for="slot-3-2">1.00pm - 2.00pm</label>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn-app-primary w-100" data-bs-dismiss="modal">Confirm Selection</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

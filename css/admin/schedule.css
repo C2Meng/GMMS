@@ -1,8 +1,7 @@
 /* =========================================================
-   Frontdesk — Schedule page styles
-   Additive only: builds on the tokens and .fd-card primitive
-   already defined in style.css. Nothing here redefines a
-   rule that file owns.
+   Frontdesk Admin — Desktop Schedule Page Styles
+   Builds on the tokens and .fd-card primitive defined
+   in your global style.css.
    ========================================================= */
 
 body {
@@ -14,6 +13,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 @media (min-width: 992px) {
   .sc-page {
     padding: var(--fd-space-lg);
@@ -29,27 +29,32 @@ body {
   gap: 0.5rem;
   margin-bottom: var(--fd-space-md);
 }
+
 .sc-header-left {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
 }
+
 .sc-title {
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--fd-on-surface);
   margin: 0;
 }
+
 .sc-subtitle {
   font-size: 0.85rem;
   color: var(--fd-on-surface-variant);
 }
+
 .sc-add-session {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--fd-primary);
   text-decoration: none;
 }
+
 .sc-add-session:hover {
   text-decoration: underline;
 }
@@ -63,11 +68,13 @@ body {
   padding-bottom: var(--fd-space-sm);
   flex-wrap: wrap;
 }
+
 .sc-cal-month {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--fd-on-surface);
 }
+
 .sc-today-pill {
   display: inline-flex;
   align-items: center;
@@ -80,6 +87,7 @@ body {
   font-weight: 600;
   color: var(--fd-on-surface);
 }
+
 .sc-today-pill .sc-nav-arrows {
   display: flex;
   align-items: center;
@@ -87,6 +95,7 @@ body {
   padding-left: 0.5rem;
   gap: 0.1rem;
 }
+
 .sc-today-pill button {
   background: transparent;
   border: none;
@@ -99,10 +108,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .sc-today-pill button:hover {
   background-color: var(--fd-surface-container);
   color: var(--fd-on-surface);
 }
+
 .sc-today-pill .material-symbols-outlined {
   font-size: 1.05rem;
 }
@@ -112,6 +123,7 @@ body {
   border-top: 1px solid var(--fd-outline-variant);
   overflow-x: auto;
 }
+
 .sc-grid-scroll {
   max-height: 32rem;
   overflow-y: auto;
@@ -134,6 +146,7 @@ body {
   display: flex;
   flex: 1;
 }
+
 .sc-day-col {
   flex: 1;
   min-width: 6rem;
@@ -150,6 +163,7 @@ body {
   background-color: var(--fd-surface-container-lowest);
   border-bottom: 1px solid var(--fd-outline-variant);
 }
+
 .sc-head-corner {
   flex: 0 0 3.75rem;
   position: sticky;
@@ -157,6 +171,7 @@ body {
   background-color: var(--fd-surface-container-lowest);
   z-index: 4;
 }
+
 .sc-head-day {
   flex: 1;
   min-width: 6rem;
@@ -164,11 +179,13 @@ body {
   padding: 0.6rem 0.25rem;
   border-left: 1px solid var(--fd-outline-variant);
 }
+
 .sc-head-day .sc-date-num {
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--fd-on-surface);
 }
+
 .sc-head-day .sc-date-name {
   font-size: 0.75rem;
   color: var(--fd-on-surface-variant);
@@ -180,6 +197,7 @@ body {
   border-bottom: 1px solid var(--fd-outline-variant);
   position: relative;
 }
+
 .sc-hour-label {
   position: absolute;
   top: -0.5rem;
@@ -205,6 +223,7 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+
 .sc-event-title {
   font-size: 0.72rem;
   font-weight: 700;
@@ -213,35 +232,25 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .sc-event-time {
   font-size: 0.64rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.2;
 }
 
-.sc-bg-purple {
-  background-color: #c084fc;
-}
-.sc-bg-pink {
-  background-color: #f472b6;
-}
-.sc-bg-teal {
-  background-color: #2dd4bf;
-}
-.sc-bg-blue {
-  background-color: #60a5fa;
-}
-.sc-bg-amber {
-  background-color: #fbbf24;
-}
-.sc-bg-slate {
-  background-color: #64748b;
-}
+.sc-bg-purple { background-color: #c084fc; }
+.sc-bg-pink   { background-color: #f472b6; }
+.sc-bg-teal   { background-color: #2dd4bf; }
+.sc-bg-blue   { background-color: #60a5fa; }
+.sc-bg-amber  { background-color: #fbbf24; }
+.sc-bg-slate  { background-color: #64748b; }
 
 /* ---- Right column ---- */
 .sc-side-card {
   padding: var(--fd-space-sm);
 }
+
 .sc-side-card + .sc-side-card {
   margin-top: var(--fd-space-md);
 }
@@ -253,15 +262,18 @@ body {
   justify-content: space-between;
   margin-bottom: var(--fd-space-sm);
 }
+
 .sc-mini-month {
   font-weight: 700;
   font-size: 0.88rem;
   color: var(--fd-on-surface);
 }
+
 .sc-mini-nav {
   display: flex;
   gap: 0.15rem;
 }
+
 .sc-mini-nav button {
   background: transparent;
   border: none;
@@ -274,9 +286,11 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
 .sc-mini-nav button:hover {
   background-color: var(--fd-surface-container);
 }
+
 .sc-mini-nav .material-symbols-outlined {
   font-size: 1rem;
 }
@@ -287,6 +301,7 @@ body {
   row-gap: 0.35rem;
   text-align: center;
 }
+
 .sc-mini-dow {
   font-size: 0.62rem;
   font-weight: 700;
@@ -294,6 +309,7 @@ body {
   color: var(--fd-outline);
   padding-bottom: 0.25rem;
 }
+
 .sc-mini-date {
   font-size: 0.76rem;
   color: var(--fd-on-surface);
@@ -301,6 +317,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .sc-mini-date span {
   width: 1.6rem;
   height: 1.6rem;
@@ -309,12 +326,15 @@ body {
   justify-content: center;
   border-radius: 50%;
 }
+
 .sc-mini-date.is-muted {
   color: var(--fd-outline);
 }
+
 .sc-mini-date.is-inrange span {
   background-color: var(--fd-surface-container-high);
 }
+
 .sc-mini-date.is-today span {
   background-color: var(--fd-primary-container);
   color: #ffffff;
@@ -328,11 +348,13 @@ body {
   justify-content: space-between;
   margin-bottom: var(--fd-space-sm);
 }
+
 .sc-sessions-title {
   font-weight: 700;
   font-size: 0.88rem;
   color: var(--fd-on-surface);
 }
+
 .sc-session-add {
   display: inline-flex;
   align-items: center;
@@ -345,6 +367,7 @@ body {
   background: transparent;
   cursor: pointer;
 }
+
 .sc-session-add .material-symbols-outlined {
   font-size: 1rem;
 }
@@ -353,45 +376,54 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .sc-session-item {
   padding: 0.75rem 0;
   border-top: 1px solid var(--fd-outline-variant);
 }
+
 .sc-session-item:first-child {
   border-top: none;
   padding-top: 0.25rem;
 }
+
 .sc-session-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
 }
+
 .sc-session-name {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--fd-on-surface);
 }
+
 .sc-session-dot {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   flex-shrink: 0;
 }
+
 .sc-session-time {
   font-size: 0.78rem;
   color: var(--fd-on-surface-variant);
   margin-top: 0.15rem;
 }
+
 .sc-session-attendees {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
+
 .sc-avatar-stack {
   display: flex;
 }
+
 .sc-avatar-stack .sc-avatar {
   width: 1.6rem;
   height: 1.6rem;
@@ -403,12 +435,15 @@ body {
   color: #ffffff;
   margin-left: -0.5rem;
 }
+
 .sc-avatar-stack .sc-avatar:first-child {
   margin-left: 0;
 }
+
 .sc-avatar .material-symbols-outlined {
   font-size: 0.95rem;
 }
+
 .sc-attendees-more {
   font-size: 0.76rem;
   color: var(--fd-on-surface-variant);

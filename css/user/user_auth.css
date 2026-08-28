@@ -1,7 +1,7 @@
 /* Full screen background setup */
 .login-page {
     min-height: 100vh;
-    background: url('../images/gym-bg.png') no-repeat center right; 
+    background: url('../../images/gym-bg.png') no-repeat center right;
     background-size: cover;
     position: relative;
 }

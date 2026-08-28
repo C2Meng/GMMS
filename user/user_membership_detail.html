@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Details - Gym System</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Global CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <!-- White Mask Overlay for Background -->
+    <div class="app-mask"></div>
+
+    <!-- Central Mobile Frame -->
+    <div class="mobile-frame shadow-lg d-flex flex-column bg-white">
+        
+        <!-- Global Header -->
+        <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_dashboard.html">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                </a>
+                <span class="app-header-username">Username</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_profile.html">
+                    <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                        Active <i class="bi bi-person-circle"></i>
+                    </span>
+                </a>
+                <a href="user_attendance_qr.html" class="text-decoration-none">
+                    <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area (Scrollable) -->
+        <div class="frame-content pb-4 flex-grow-1 overflow-auto">
+            
+            <!-- Global Breadcrumb -->
+            <div class="app-breadcrumb">
+                <a href="user_dashboard.html">Dashboard</a> &gt; Membership
+            </div>
+
+            <!-- Page Content -->
+            <div class="px-3 pb-4">
+                
+                <!-- Hero Image -->
+                <img src="../images/program-1.jpg" alt="Membership" class="img-fluid rounded-4 mb-3 w-100" style="object-fit: cover; height: 180px;">
+
+                <!-- Title & Description -->
+                <h3 class="fw-bold mb-2">Membership</h3>
+                <p class="text-muted fw-bold mb-4" style="font-size: 0.8rem; line-height: 1.3;">
+                    Stay active, stay healthy, and reach your fitness goals with our flexible gym membership. Enjoy access to our facilities, equipment, and fitness services designed to support your workout journey.
+                </p>
+
+                <!-- Included Benefits List -->
+                <div class="mb-4">
+                    <h6 class="fw-bold text-secondary mb-1" style="font-size: 0.85rem;">Included Benefits</h6>
+                    <ul class="text-dark fw-bold mb-0" style="font-size: 0.75rem; padding-left: 1.25rem; line-height: 1.4;">
+                        <li>Full Gym Access</li>
+                        <li>Locker and Shower Facilities</li>
+                        <li>Fitness Assessment</li>
+                        <li>Parking Access</li>
+                    </ul>
+                </div>
+
+                <!-- Fee & Charges Table -->
+                <div class="app-table-title">Fee & Charges:</div>
+                <table class="app-table shadow-sm rounded-3 overflow-hidden mb-2">
+                    <tbody>
+                        <tr>
+                            <td>Subscription Fee</td>
+                            <td>Rm539 per 3month</td>
+                        </tr>
+                        <tr>
+                            <td>Locker Rental</td>
+                            <td>Rm 10.00</td>
+                        </tr>
+                        <tr>
+                            <td>Joining Fee</td>
+                            <td>Rm 5.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Totals Summary Block -->
+                <div class="border-top border-bottom border-dark py-2 mb-4" style="border-width: 2px !important;">
+                    <div class="d-flex justify-content-between px-2 mb-2" style="font-size: 0.75rem; font-weight: 700;">
+                        <div>Subtotal<br>Tax Amount</div>
+                        <div class="text-end">664.00<br>53.12</div>
+                    </div>
+                    <div class="d-flex justify-content-between px-2 pt-2 border-top border-dark" style="font-size: 0.75rem; font-weight: 700;">
+                        <div>Total</div>
+                        <div>717.12</div>
+                    </div>
+                </div>
+
+                <!-- Membership Contract (PDF Embed) -->
+                <div class="mb-3">
+                    <h6 class="fw-bold mb-2 text-secondary" style="font-size: 0.9rem;">Membership Contract</h6>
+                    <div class="border border-secondary rounded-3 overflow-hidden bg-light d-flex align-items-center justify-content-center" style="height: 380px;">
+                        <!-- Using an iframe to embed the PDF -->
+                        <iframe src="../assets/sample-contract.pdf" width="100%" height="100%" style="border: none;">
+                            <p class="text-center fw-bold text-muted" style="font-size: 0.8rem;">
+                                Your browser does not support PDFs. <br>
+                                <a href="../assets/sample-contract.pdf" class="text-primary text-decoration-none">Download the Membership Contract</a>.
+                            </p>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="form-check mb-2">
+                    <input class="form-check-input  border-dark" type="checkbox" id="termsCheck1">
+                    <label class="form-check-label fw-bold text-dark" for="termsCheck1" style="font-size: 0.65rem; line-height: 1.2;">
+                        I hereby confirm that I have read, understood, and agree to all the terms and conditions stated in the Membership Contract.
+                    </label>
+                </div>
+                <div class="form-check mb-4">
+                    <input class="form-check-input border-dark" type="checkbox" id="termsCheck2">
+                    <label class="form-check-label fw-bold text-dark" for="termsCheck2" style="font-size: 0.65rem; line-height: 1.2;">
+                        I acknowledge that my membership is subject to these terms and that I am bound by them.
+                    </label>
+                </div>
+
+                <!-- Signature Box (Opens Modal) -->
+                <div class="mb-4">
+                    <label class="form-label fw-bold text-dark mb-1" style="font-size: 0.9rem;">Signature</label>
+                    <div id="signature-container" class="border border-secondary rounded-3 p-2 mb-1 d-flex flex-column align-items-center justify-content-center bg-white" style="height: 100px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#signatureModal">
+                        <i class="bi bi-pen fs-4 text-muted mb-1" id="signature-icon"></i>
+                        <span class="text-muted fw-bold" style="font-size: 0.75rem;" id="signature-text">Tap here to sign</span>
+                        <img id="signature-result" src="" alt="Signature" class="d-none" style="max-height: 80px; max-width: 100%;">
+                    </div>
+                    <div class="text-center fw-bold text-dark" style="font-size: 0.55rem; text-decoration: underline;">
+                        Please sign above to confirm your agreement with the Terms & Conditions.
+                    </div>
+                </div>
+
+                <!-- Payment Method Section -->
+                <div class="payment-method-title mb-2">Payment Method</div>
+                <div class="row g-2 mb-4">
+                    <div class="col-6">
+                        <div class="payment-card">
+                            <i class="bi bi-bank"></i>
+                            <span>AxaiPay</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="payment-card active">
+                            <i class="bi bi-calculator"></i> 
+                            <span>Cash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <a href="user_by_cash_receipt.html" class="btn-app-primary w-100 text-decoration-none text-center d-flex justify-content-center align-items-center">Proceed</a>
+
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- Signature Modal -->
+    <div class="modal fade" id="signatureModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold" style="font-size: 1rem;">Draw Your Signature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <canvas id="signature-pad" class="border border-dark rounded bg-white w-100" height="200" style="touch-action: none; cursor: crosshair;"></canvas>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary btn-sm fw-bold px-3" id="btn-clear-signature">Clear</button>
+                    <button type="button" class="btn btn-primary btn-sm fw-bold px-4" id="btn-save-signature" style="background-color: #89CFF0; border:none; color:#000;">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Global Custom Script -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

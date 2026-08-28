@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- 1. Global CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     
     <!-- 2. Program Page Specific CSS -->
-    <link href="css/user_program_listing.css" rel="stylesheet">
+    <link href="../css/user/user_program_listing.css" rel="stylesheet">
 </head>
 <body class="app-body">
 
@@ -29,15 +29,17 @@
         <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
             <div class="d-flex align-items-center gap-2">
                 <a href="user_dashboard.html">
-                    <img src="images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
                 </a>
                 <span class="app-header-username">Username</span>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
-                    Active <i class="bi bi-gear"></i>
-                </span>
-                <a href="attendance_qr.html" class="text-decoration-none">
+                <a href="user_profile.html">
+                    <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                        Active <i class="bi bi-person-circle"></i>
+                    </span>
+                </a>
+                <a href="user_attendance_qr.html" class="text-decoration-none">
                     <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
                 </a>
             </div>
@@ -55,7 +57,7 @@
             <div class="px-3 d-flex flex-column gap-3">
                 
                 <!-- Program Card 1 -->
-                <a href="program_detail.html" class="text-decoration-none text-dark program-link">
+                <a href="user_program_detail.html" class="text-decoration-none text-dark program-link">
                     <div class="card program-card border border-dark rounded-3 shadow-sm">
                         <div class="program-image bg-program-1"></div>
                         <div class="card-body d-flex flex-column p-3">
