@@ -14,19 +14,16 @@
         ["schedule.html", "calendar_month", "Schedule"],
         ["sessions.html", "open_in_full", "Sessions"],
         ["leads.html", "person_add", "Leads"],
-        ["../user/user_attendance_qr.html", "how_to_reg", "Attendance"],
         ["report_listing.html", "leaderboard", "Reports"],
         ["request.html", "help", "Requests"],
-        ["../user/user_upcoming_billing.html", "payments", "Payments"],
       ],
     },
     {
       label: "Administration",
       items: [
         ["plans.html", "description", "Plans"],
-        ["../user/user_freeze_cancel_request.html", "policy", "Policies"],
+        ["policies.html", "policy", "Policies"],
         ["staff.html", "work", "Staff"],
-        ["../user/user_feedback.html", "history", "Audit"],
       ],
     },
   ];

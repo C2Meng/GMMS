@@ -22,36 +22,35 @@
 
   <body class="min-vh-100 d-flex flex-column bg-fd-surface text-fd-on-surface">
     <header
-      class="w-100 d-flex align-items-center justify-content-between px-4 px-md-5 py-4 bg-fd-surface"
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
     >
-      <div class="d-flex align-items-center gap-3">
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
         <button
           type="button"
           aria-label="Go Back"
-          class="btn btn-light rounded-circle border-0 d-inline-flex align-items-center justify-content-center p-2"
+          onclick="history.back()"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
         >
           <i class="bi bi-arrow-left"></i>
         </button>
 
-        <div class="d-flex align-items-center flex-wrap gap-3">
-          <h1 class="m-0 fw-bold text-uppercase fs-4">
-            USERNAME1 - TRIAL AND LEADS
-          </h1>
-
-          <span class="badge rounded-pill fw-semibold px-3 py-2 fd-tertiary">
-            Active
-          </span>
-
-          <span class="badge rounded-pill fw-semibold px-3 py-2 fd-error">
-            Unconverted
-          </span>
+        <div class="fd-detail-heading">
+          <div class="fd-detail-title-row">
+            <h1 class="fd-detail-title">USERNAME1 - TRIAL AND LEADS</h1>
+            <span class="fd-detail-status fd-detail-status-active">Active</span>
+            <span class="fd-detail-status fd-detail-status-unconverted">
+              Unconverted
+            </span>
+          </div>
+          <div class="fd-detail-breadcrumb">
+            <span>Trial and Leads</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span>USERNAME1</span>
+          </div>
         </div>
       </div>
 
-      <button
-        type="button"
-        class="btn btn-fd-primary py-2 px-4 rounded-pill small"
-      >
+      <button type="button" class="fd-detail-action btn btn-fd-primary small">
         Save
       </button>
     </header>
