@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Gym System</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Global CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <!-- Feedback Page CSS -->
+    <link href="../css/user/user_feedback.css" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <!-- White Mask Overlay for Background -->
+    <div class="app-mask"></div>
+
+    <!-- Central Mobile Frame -->
+    <div class="mobile-frame shadow-lg d-flex flex-column bg-white">
+        
+        <!-- Global Header -->
+        <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_dashboard.html">
+                    <img src="../images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+                </a>
+                <span class="app-header-username">Username</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <a href="user_profile.html">
+                    <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+                        Active <i class="bi bi-person-circle"></i>
+                    </span>
+                </a>
+                <a href="user_attendance_qr.html" class="text-decoration-none">
+                    <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="frame-content pb-4 flex-grow-1 overflow-auto">
+            
+            <!-- Global Breadcrumb -->
+            <div class="app-breadcrumb mb-2">
+                <a href="user_dashboard.html">Dashboard</a> &gt; Feedback
+            </div>
+
+            <!-- Header Section -->
+            <div class="px-3">
+                <h3 class="fw-bold mb-4" style="font-size: 1.25rem;">Feedback</h3>
+                
+                <div class="text-center mb-3">
+                    <h2 class="fw-bold mb-3" style="color: #3bb2f6; font-size: 2.2rem; line-height: 1.2;">Your Opinion<br>Matters to Us</h2>
+                    <p class="fw-bold" style="font-size: 0.85rem; color: #213145; line-height: 1.4; margin: 0 auto; max-width: 90%;">
+                        Your feedback helps us improve and provide a better fitness experience for everyone.
+                    </p>
+                </div>
+
+                <!-- Center Icon -->
+                <div class="text-center mb-4">
+                    <img src="../images/feedback.png" alt="Feedback Icon" class="img-fluid" style="width: 100px;">
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <form action="#" method="POST" class="px-3 pb-3">
+                
+                <!-- Rating 1: Overall Satisfaction -->
+                <div class="mb-4">
+                    <label class="form-label fw-bold text-dark mb-2" style="font-size: 0.8rem;">Overall Satisfaction Level</label>
+                    <div class="rating-group">
+                        <!-- Rating 1-5 -->
+                        <div>
+                            <input type="radio" name="overall_rating" id="overall-1" value="1" class="rating-radio">
+                            <label for="overall-1" class="rating-label">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="overall_rating" id="overall-2" value="2" class="rating-radio">
+                            <label for="overall-2" class="rating-label">2</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="overall_rating" id="overall-3" value="3" class="rating-radio">
+                            <label for="overall-3" class="rating-label">3</label>
+                        </div>
+                        <div>
+                            <!-- Number 4 is pre-selected as an example -->
+                            <input type="radio" name="overall_rating" id="overall-4" value="4" class="rating-radio" checked>
+                            <label for="overall-4" class="rating-label">4</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="overall_rating" id="overall-5" value="5" class="rating-radio">
+                            <label for="overall-5" class="rating-label">5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating 2: Facility & Equipment -->
+                <div class="mb-4">
+                    <label class="form-label fw-bold text-dark mb-2" style="font-size: 0.8rem;">Facility & Equipment Satisfaction</label>
+                    <div class="rating-group">
+                        <div>
+                            <input type="radio" name="facility_rating" id="facility-1" value="1" class="rating-radio">
+                            <label for="facility-1" class="rating-label">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="facility_rating" id="facility-2" value="2" class="rating-radio">
+                            <label for="facility-2" class="rating-label">2</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="facility_rating" id="facility-3" value="3" class="rating-radio">
+                            <label for="facility-3" class="rating-label">3</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="facility_rating" id="facility-4" value="4" class="rating-radio" checked>
+                            <label for="facility-4" class="rating-label">4</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="facility_rating" id="facility-5" value="5" class="rating-radio">
+                            <label for="facility-5" class="rating-label">5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating 3: Staff Service -->
+                <div class="mb-4">
+                    <label class="form-label fw-bold text-dark mb-2" style="font-size: 0.8rem;">Staff service rating</label>
+                    <div class="rating-group">
+                        <div>
+                            <input type="radio" name="staff_rating" id="staff-1" value="1" class="rating-radio">
+                            <label for="staff-1" class="rating-label">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="staff_rating" id="staff-2" value="2" class="rating-radio">
+                            <label for="staff-2" class="rating-label">2</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="staff_rating" id="staff-3" value="3" class="rating-radio">
+                            <label for="staff-3" class="rating-label">3</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="staff_rating" id="staff-4" value="4" class="rating-radio">
+                            <label for="staff-4" class="rating-label">4</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="staff_rating" id="staff-5" value="5" class="rating-radio">
+                            <label for="staff-5" class="rating-label">5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="mb-4">
+                    <label for="feedbackComments" class="form-label fw-bold text-dark mb-2" style="font-size: 0.8rem;">How can we improve? (optional)</label>
+                    <textarea class="form-control text-secondary" id="feedbackComments" rows="3" placeholder="example: Buy new equipment" style="font-size: 0.85rem; border-color: #ced4da; resize: none;"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-app-primary w-100 mt-2">Submit</button>
+
+            </form>
+            
+        </div> 
+    </div> 
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Global Custom Script -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

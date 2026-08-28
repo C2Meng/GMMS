@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freezing & Cancellation - Gym System</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body class="app-body">
+    
+    <div class="app-mask"></div>
+
+    <div class="mobile-frame shadow-lg d-flex flex-column bg-white">
+      
+      <!-- Header -->
+      <div class="app-header d-flex justify-content-between align-items-center p-3 sticky-top z-3">
+        <div class="d-flex align-items-center gap-2">
+          <a href="user_dashboard.html">
+            <img src="images/company-logo1.png" alt="Frontdesk" class="app-header-logo">
+          </a>
+          <span class="app-header-username">Username</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <a href="user_profile.html" class="text-decoration-none">
+            <span class="app-header-badge badge rounded-pill text-dark d-flex align-items-center gap-1 px-3 py-1">
+              Active <i class="bi bi-person-circle"></i>
+            </span>
+          </a>
+          <a href="user_attendance_qr.html" class="text-decoration-none">
+            <i class="bi bi-qr-code-scan fs-4 text-primary"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="frame-content pb-4 flex-grow-1 overflow-auto">
+        
+        <div class="app-breadcrumb">
+          <a href="user_dashboard.html">Dashboard</a> &gt; Freezing and Cancellation
+        </div>
+
+        <div class="px-3 pb-4">
+          <!-- Toggle Tabs -->
+          <div class="d-flex gap-2 w-100 mb-4">
+            <div class="flex-fill toggle-pill active" id="tab-freezing">
+              Membership Freezing
+            </div>
+            <div class="flex-fill toggle-pill" id="tab-cancellation">
+              Membership Cancellation
+            </div>
+          </div>
+
+          <!-- SECTION 1: MEMBERSHIP FREEZING -->
+          <div id="section-freezing">
+            <h3 class="fw-bold mb-3">Membership Freezing Request</h3>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Freezing period is not included in the minimum term</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Freezing your membership costs RM45 per month, and the freezing fee must be paid in advance.</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>A written notice of at least one month is required. Therefore, the membership freeze will take effect one month after the request has been approved by the staff.</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-4 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Your membership will automatically resume after the freeze period.</span>
+            </div>
+
+            <div class="app-table-title">Package Details:</div>
+            <table class="app-table shadow-sm rounded-3 overflow-hidden mb-3">
+              <tbody>
+                <tr>
+                  <td>Member Name</td>
+                  <td>Username</td>
+                </tr>
+                <tr>
+                  <td>Membership No</td>
+                  <td>xxxxx11111</td>
+                </tr>
+                <tr>
+                  <td>Date of Request</td>
+                  <td>7-Aug-2026</td>
+                </tr>
+                <tr>
+                  <td>Minimum Term</td>
+                  <td>3month</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <label class="form-label fw-bold text-dark mb-1" style="font-size: 0.8rem">Freeze Period</label>
+            <div class="d-flex gap-2 mb-3">
+              <div class="flex-fill selection-card active freeze-period-btn">
+                1 month
+              </div>
+              <div class="flex-fill selection-card freeze-period-btn">
+                2 months
+              </div>
+              <div class="flex-fill selection-card freeze-period-btn">
+                3 months
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: MEMBERSHIP CANCELLATION -->
+          <div id="section-cancellation" class="d-none">
+            <h3 class="fw-bold mb-3">Membership Cancellation Request</h3>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Cancellation during Minimum Term is not allowed unless stated in the Membership Agreement.</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Early cancellation requires RM200 fee + 1 month's membership fee in advance.</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-1 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Submit cancellation request at least 1 month before the next billing date.</span>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-4 text-danger fw-bold" style="font-size: 0.7rem">
+              <i class="bi bi-exclamation-circle"></i>
+              <span>Cancellation fee is waived during the renewal contract period.</span>
+            </div>
+
+            <div class="app-table-title">Package Details:</div>
+            <table class="app-table shadow-sm rounded-3 overflow-hidden mb-3">
+              <tbody>
+                <tr>
+                  <td>Member Name</td>
+                  <td>Username</td>
+                </tr>
+                <tr>
+                  <td>Membership No</td>
+                  <td>xxxxx11111</td>
+                </tr>
+                <tr>
+                  <td>Date of Request</td>
+                  <td>7-Aug-2026</td>
+                </tr>
+                <tr>
+                  <td>Minimum Term End Date</td>
+                  <td>10-October-2026</td>
+                </tr>
+                <tr>
+                  <td>Next Billing Date</td>
+                  <td>7-September-2026</td>
+                </tr>
+                <tr>
+                  <td>Cancellation Eligibility</td>
+                  <td>
+                    <span class="badge bg-danger rounded-pill px-3 py-1 text-white">Penalties Applies</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- SHARED FORM FIELDS -->
+
+          <!-- Reason -->
+          <div class="mb-3 mt-1">
+            <label class="form-label fw-bold text-dark mb-1" style="font-size: 0.8rem">Reason</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              placeholder="example: xxxxxxxxxxxxxx"
+              style="font-size: 0.8rem; border-color: #ced4da; resize: none"
+            ></textarea>
+          </div>
+
+          <!-- Attachment (Functional Upload) -->
+          <div class="mb-3">
+            <label class="form-label fw-bold text-dark mb-1" style="font-size: 0.8rem">Attachment</label>
+            <input type="file" id="attachment-input" class="d-none" accept="image/*,.pdf" />
+            <label
+              for="attachment-input"
+              id="attachment-label"
+              class="border border-secondary rounded-pill text-center py-2 w-100 text-muted d-block bg-light"
+              style="font-size: 0.75rem; cursor: pointer; transition: all 0.2s"
+            >
+              <i class="bi bi-upload me-1"></i> Click to upload attachment (e.g., medical receipt)
+            </label>
+          </div>
+
+          <!-- Signature Box (Opens Modal) -->
+          <div class="mb-4">
+            <label class="form-label fw-bold text-dark mb-1" style="font-size: 0.8rem">Signature</label>
+            <div
+              id="signature-container"
+              class="border border-secondary rounded-3 p-2 mb-1 d-flex flex-column align-items-center justify-content-center bg-light"
+              style="height: 100px; cursor: pointer"
+              data-bs-toggle="modal"
+              data-bs-target="#signatureModal"
+            >
+              <i class="bi bi-pen fs-4 text-muted mb-1" id="signature-icon"></i>
+              <span class="text-muted fw-bold" style="font-size: 0.75rem" id="signature-text">Tap here to sign</span>
+              <img id="signature-result" src="" alt="Signature" class="d-none" style="max-height: 80px; max-width: 100%" />
+            </div>
+            <div class="text-center fw-bold text-dark" style="font-size: 0.45rem; text-decoration: underline">
+              Please sign above to confirm your agreement with the Terms & Conditions.
+            </div>
+          </div>
+
+          <!-- Proceed Button (Now triggers the modal) -->
+          <button type="button" class="btn-app-primary w-100" data-bs-toggle="modal" data-bs-target="#proceedModal">
+            Proceed
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signature Modal -->
+    <div class="modal fade" id="signatureModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header border-bottom-0 pb-0">
+            <h5 class="modal-title fw-bold" style="font-size: 1rem">
+              Draw Your Signature
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <canvas
+              id="signature-pad"
+              class="border border-dark rounded bg-white w-100"
+              height="200"
+              style="touch-action: none; cursor: crosshair"
+            ></canvas>
+          </div>
+          <div class="modal-footer border-top-0 pt-0 d-flex justify-content-between">
+            <button type="button" class="btn btn-outline-secondary btn-sm fw-bold px-3" id="btn-clear-signature">
+              Clear
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm fw-bold px-4"
+              id="btn-save-signature"
+              style="background-color: #89cff0; border: none; color: #000"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proceed Confirmation Modal -->
+    <div class="modal fade" id="proceedModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered px-4">
+        <div class="modal-content border-0 shadow rounded-4 p-4 text-center">
+          <div class="modal-body p-0">
+            <!-- Danger Icon -->
+            <div class="mb-3">
+              <i class="bi bi-exclamation-circle text-danger" style="font-size: 5rem"></i>
+            </div>
+
+            <!-- Text Message -->
+            <p class="fw-bold text-dark mb-4 px-2" style="font-size: 1rem; color: #213145 !important">
+              You will be redirect to the payment page for the freezing/cancellation membership fees
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="d-flex gap-3">
+              <button type="button" class="btn-app-outline flex-fill py-2" data-bs-dismiss="modal">
+                Cancel
+              </button>
+              <!-- Change the href below to whatever page it should redirect to next -->
+              <a
+                href="user_order_summary.html"
+                class="btn-app-primary flex-fill py-2 text-decoration-none d-flex align-items-center justify-content-center"
+              >Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Global Custom Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
