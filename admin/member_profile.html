@@ -22,17 +22,29 @@
   </head>
 
   <body>
-    <div class="mp-page">
-      <!-- Header -->
-      <div class="mb-3">
-        <h1 class="mp-title">Member Profile</h1>
-        <div class="mp-breadcrumb">
-          <span>Members</span>
-          <span class="material-symbols-outlined">chevron_right</span>
-          <span>Jane Doe</span>
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Member Profile</h1>
+          <div class="fd-detail-breadcrumb">
+            <span>Members</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span>Jane Doe</span>
+          </div>
         </div>
       </div>
+    </header>
 
+    <div class="mp-page">
       <div class="row g-3">
         <!-- Left: Profile card -->
         <div class="col-12 col-lg-5 col-xl-4">

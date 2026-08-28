@@ -1175,6 +1175,79 @@ body {
    ========================================================= */
 
 /* Header Styles */
+.fd-detail-header {
+  height: 68px;
+  min-height: 68px;
+  box-sizing: border-box;
+  flex: 0 0 68px;
+  padding: 0.625rem 2.5rem;
+  border-bottom: 1px solid var(--fd-outline-variant);
+  background-color: var(--fd-surface);
+}
+
+.fd-detail-header-left {
+  min-width: 0;
+}
+
+.fd-detail-heading {
+  min-width: 0;
+}
+
+.fd-detail-back {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  color: var(--fd-on-surface);
+  background-color: transparent;
+  flex: 0 0 auto;
+}
+
+.fd-detail-back:hover,
+.fd-detail-back:focus-visible {
+  color: var(--fd-primary);
+  background-color: var(--fd-surface-container-low);
+}
+
+.fd-detail-title {
+  margin: 0;
+  color: var(--fd-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.fd-detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.15rem;
+  color: var(--fd-outline);
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.fd-detail-breadcrumb .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.fd-detail-action {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .fd-detail-header {
+    padding: 0.625rem 1rem;
+  }
+
+  .fd-detail-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.25rem;
+  }
+}
+
 .app-header {
   background-color: #ffffff;
   border-bottom: 1px solid #dee2e6;
@@ -1657,9 +1730,9 @@ body {
 }
 
 .selection-card.active {
-    background-color: var(--fd-mobile-primary);
-    border-color: var(--fd-mobile-primary);
-    color: #ffffff;
+  background-color: var(--fd-mobile-primary);
+  border-color: var(--fd-mobile-primary);
+  color: #ffffff;
 }
 
 /* =========================================================
@@ -1667,23 +1740,23 @@ body {
    ========================================================= */
 
 .time-slot-label {
-    font-size: 0.75rem;
-    border: 1.5px solid #ced4da;
-    color: #495057;
-    transition: all 0.2s ease;
-    cursor: pointer;
+  font-size: 0.75rem;
+  border: 1.5px solid #ced4da;
+  color: #495057;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .btn-check:checked + .time-slot-label {
-    background-color: var(--fd-mobile-primary, #89CFF0);
-    border-color: var(--fd-mobile-primary, #89CFF0);
-    color: #000000;
+  background-color: var(--fd-mobile-primary, #89cff0);
+  border-color: var(--fd-mobile-primary, #89cff0);
+  color: #000000;
 }
 
 .btn-check:disabled + .time-slot-label {
-    background-color: #f8f9fa;
-    color: #adb5bd;
-    border-color: #e9ecef;
-    cursor: not-allowed;
-    text-decoration: line-through;
+  background-color: #f8f9fa;
+  color: #adb5bd;
+  border-color: #e9ecef;
+  cursor: not-allowed;
+  text-decoration: line-through;
 }

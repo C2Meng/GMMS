@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoSession1 - Session Detail</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/admin/dashboard.css" rel="stylesheet" />
+  </head>
+
+  <body class="min-vh-100 d-flex flex-column bg-fd-surface text-fd-on-surface">
+    <!-- Top Navigation -->
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Session Details</h1>
+          <div class="fd-detail-breadcrumb">
+            <span>Sessions</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span>DemoSession1</span>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="fd-detail-action btn btn-fd-primary rounded-pill py-2 px-4"
+      >
+        Save
+      </button>
+    </header>
+
+    <div class="flex-grow-1 w-100">
+      <main class="container-fluid px-4 px-md-5 py-5">
+        <div class="w-100 mx-auto">
+          <!-- Session Details Header -->
+          <section class="fd-card no-hover p-4 w-100 overflow-hidden">
+            <h1 class="fw-bold fs-2 mb-4 text-fd-on-surface">DemoSession1</h1>
+
+            <div class="row g-4 border-bottom pb-4">
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Number of student:
+                  </span>
+                  <span class="fw-medium">8/10</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Location:
+                  </span>
+                  <span class="fw-medium">RoomA</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Trainer ID:
+                  </span>
+                  <span class="fw-medium">xxxxxx1234</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Session ID:
+                  </span>
+                  <span class="fw-medium">xxxx1234</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Trainer:
+                  </span>
+                  <span class="fw-medium">John Lim</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                  >
+                    Session ID:
+                  </span>
+                  <span class="fw-medium">xxxx1234</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Attendance Table -->
+          <section class="fd-card no-hover p-4 w-100 overflow-hidden">
+            <!-- Table Header Controls -->
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3 w-100 mb-4"
+            >
+              <div>
+                <h2 class="fw-bold fs-4 mb-1 text-fd-on-surface">
+                  Session Attendance
+                </h2>
+                <p class="font-monospace small text-fd-on-surface-variant mb-0">
+                  12 total · 7 active
+                </p>
+              </div>
+
+              <div
+                class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 w-100 w-sm-auto"
+              >
+                <button
+                  type="button"
+                  class="btn btn-fd-outline d-inline-flex align-items-center justify-content-center gap-2 px-3 py-2"
+                >
+                  <i class="bi bi-funnel"></i>
+                  <span>Filter</span>
+                </button>
+
+                <div class="fd-list-search">
+                  <i class="bi bi-search"></i>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    placeholder="Search for session"
+                    aria-label="Search for session"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="fd-list-scroll w-100">
+              <table class="fd-list-table table align-middle mb-0 w-100">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">
+                      <span class="visually-hidden">Select</span>
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </th>
+                    <th scope="col">
+                      ID
+                      <i class="bi bi-chevron-up ms-1 text-fd-primary"></i>
+                    </th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">DAY</th>
+                    <th scope="col">DUE DATE</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col" class="text-center">ATTENDANCE</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- Row 1 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Attendance for USERNAME row 1"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 2 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Attendance for USERNAME row 2"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 3 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Attendance for USERNAME row 3"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 4 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Attendance for USERNAME row 4"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 5 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Attendance for USERNAME row 5"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Row 6 -->
+                  <tr>
+                    <td class="text-center">
+                      <span
+                        class="d-inline-block bg-fd-surface-container-highest rounded"
+                        style="width: 16px; height: 16px"
+                      ></span>
+                    </td>
+                    <td>110</td>
+                    <td class="fw-semibold">USERNAME</td>
+                    <td>MONDAY</td>
+                    <td>3-SEP-2026</td>
+                    <td>200.00</td>
+                    <td><span class="fd-list-status">ACTIVE</span></td>
+                    <td class="text-center">
+                      <div
+                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          aria-label="Attendance for USERNAME row 6"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin_sidebar.js"></script>
+  </body>
+</html>

@@ -32,10 +32,36 @@
     <link href="../css/admin/profile.css" rel="stylesheet" />
   </head>
   <body>
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Staff Profile</h1>
+          <div class="fd-detail-breadcrumb">
+            <span>Staff</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span>Jane Doe</span>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="fd-detail-action btn btn-fd-primary rounded-pill py-2 px-4"
+      >
+        Edit Profile
+      </button>
+    </header>
+
     <!-- Cover banner -->
-    <div class="sp-cover">
-      <button type="button" class="sp-edit-btn">Edit Profile</button>
-    </div>
+    <div class="sp-cover"></div>
 
     <div class="mp-page sp-content">
       <div class="row g-3 align-items-start">
