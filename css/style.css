@@ -1263,6 +1263,7 @@ body {
   border-radius: var(--fd-radius-lg);
   padding: 0.5rem 1rem;
   flex: 0 0 auto;
+  flex-wrap: wrap;
 }
 
 .fd-detail-actions {
