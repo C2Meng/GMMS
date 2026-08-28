@@ -1,0 +1,518 @@
+/* =========================================================
+     Page-specific styles — additive only. Nothing here
+     overrides tokens or components already defined in
+     style.css; it fills in the pieces that file doesn't
+     provide (status pills, circular action icons, the
+     activity feed markers).
+     ========================================================= */
+
+body {
+  background-color: var(--fd-background);
+}
+
+.mp-page {
+  padding: var(--fd-space-md) var(--fd-space-lg);
+}
+
+.mp-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--fd-on-surface);
+  margin-bottom: 0.15rem;
+}
+
+.mp-breadcrumb {
+  font-size: 0.8rem;
+  color: var(--fd-outline);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mp-breadcrumb .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+/* ---- Profile card head ---- */
+.mp-avatar {
+  width: 4.75rem;
+  height: 4.75rem;
+  min-width: 4.75rem;
+  border-radius: 50%;
+  background-color: var(--fd-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 153, 255, 0.25);
+}
+
+.mp-avatar .material-symbols-outlined {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.mp-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--fd-on-surface);
+  margin-bottom: 0.4rem;
+}
+
+/* Status pills */
+.mp-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--fd-radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.28rem 0.7rem;
+  line-height: 1;
+}
+.mp-badge-success {
+  background-color: rgba(0, 170, 118, 0.12);
+  color: var(--fd-tertiary);
+}
+.mp-badge-info {
+  background-color: var(--fd-surface-container-low);
+  color: var(--fd-primary);
+}
+.mp-badge-danger {
+  background-color: var(--fd-error-container);
+  color: var(--fd-error);
+}
+
+/* ---- Info rows ---- */
+.mp-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.mp-info-row:last-of-type {
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+
+.mp-info-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--fd-on-surface-variant);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.mp-info-label .material-symbols-outlined {
+  font-size: 1.2rem;
+  color: var(--fd-on-surface-variant);
+  flex-shrink: 0;
+}
+
+.mp-info-value {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--fd-on-surface);
+  white-space: nowrap;
+  padding-left: 0.75rem;
+}
+
+/* ---- Recent activity box ---- */
+.mp-activity-box {
+  background-color: var(--fd-surface-container-low);
+  border: 1px solid var(--fd-outline-variant);
+  border-radius: var(--fd-radius-lg);
+  padding: var(--fd-space-sm);
+  margin-top: var(--fd-space-sm);
+}
+
+.mp-activity-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--fd-on-surface);
+  margin-bottom: 0.75rem;
+}
+
+.mp-activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.mp-activity-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--fd-on-surface-variant);
+}
+
+.mp-activity-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  min-width: 1.15rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.05rem;
+}
+.mp-activity-icon .material-symbols-outlined {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+.mp-activity-icon.mp-icon-warning {
+  background-color: #f5a623;
+}
+.mp-activity-icon.mp-icon-danger {
+  background-color: var(--fd-error);
+}
+.mp-activity-icon.mp-icon-info {
+  background-color: transparent;
+}
+.mp-activity-icon.mp-icon-info .material-symbols-outlined {
+  color: var(--fd-primary-container);
+  font-size: 1.1rem;
+}
+
+/* ---- Quick action cards ---- */
+.mp-actions-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-actions-grid {
+  flex: 1 1 auto;
+  align-content: stretch;
+}
+
+.mp-action-card {
+  background-color: var(--fd-surface-container-lowest);
+  border: 1px solid var(--fd-outline-variant);
+  border-radius: var(--fd-radius-xl);
+  padding: var(--fd-space-md) var(--fd-space-sm);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--fd-space-sm);
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  text-decoration: none;
+}
+.mp-action-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.mp-action-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mp-action-icon .material-symbols-outlined {
+  font-size: 1.7rem;
+}
+
+.mp-icon-bg-green {
+  background-color: rgba(0, 170, 118, 0.12);
+}
+.mp-icon-bg-green .material-symbols-outlined {
+  color: var(--fd-tertiary-container);
+}
+
+.mp-icon-bg-purple {
+  background-color: rgba(147, 51, 234, 0.12);
+}
+.mp-icon-bg-purple .material-symbols-outlined {
+  color: #9333ea;
+}
+
+.mp-icon-bg-orange {
+  background-color: rgba(234, 88, 12, 0.12);
+}
+.mp-icon-bg-orange .material-symbols-outlined {
+  color: #ea580c;
+}
+
+.mp-icon-bg-indigo {
+  background-color: rgba(79, 70, 229, 0.12);
+}
+.mp-icon-bg-indigo .material-symbols-outlined {
+  color: #4f46e5;
+}
+
+.mp-action-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--fd-on-surface);
+  line-height: 1.3;
+}
+
+@media (max-width: 767.98px) {
+  .mp-page {
+    padding: var(--fd-space-sm);
+  }
+}
+
+/* =========================================================
+   Staff Profile — additive extension.
+   Reuses .mp-page, .mp-name and .mp-badge* as-is. Everything
+   below is new: the cover banner, the stacked staff info
+   rows (icon above a label+value pair, rather than the
+   member-profile's icon-left/value-right row), the upcoming
+   session list, and the performance metric charts.
+   ========================================================= */
+
+.sp-cover {
+  position: relative;
+  height: 6.5rem;
+  overflow: hidden;
+}
+.sp-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.sp-edit-btn {
+  position: absolute;
+  top: var(--fd-space-sm);
+  right: var(--fd-space-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--fd-primary-container);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border: none;
+  border-radius: var(--fd-radius-full);
+  padding: 0.55rem 1.1rem;
+  box-shadow: 0 6px 16px rgba(0, 153, 255, 0.3);
+  cursor: pointer;
+}
+.sp-edit-btn:hover {
+  filter: brightness(1.05);
+}
+
+.sp-content {
+  margin-top: -2.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Staff card head */
+.sp-avatar {
+  width: 4.75rem;
+  height: 4.75rem;
+  border-radius: 50%;
+  background-color: var(--fd-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-shadow: 0 8px 18px rgba(0, 153, 255, 0.25);
+}
+.sp-avatar .material-symbols-outlined {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.sp-card-head {
+  text-align: center;
+  margin-bottom: var(--fd-space-sm);
+}
+.sp-card-head .mp-name {
+  margin-top: var(--fd-space-xs);
+  margin-bottom: 0.5rem;
+}
+
+/* Stacked info rows: icon, then label above value */
+.sp-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.sp-info-row .material-symbols-outlined {
+  font-size: 1.15rem;
+  color: var(--fd-on-surface-variant);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+.sp-info-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fd-on-surface-variant);
+  margin-bottom: 0.15rem;
+}
+.sp-info-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--fd-on-surface);
+}
+
+/* Upcoming Session list */
+.sp-section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--fd-on-surface);
+  margin-bottom: var(--fd-space-sm);
+}
+
+.sp-mono {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.03em;
+}
+
+.sp-session-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--fd-outline-variant);
+}
+.sp-session-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0.25rem;
+}
+.sp-session-tag {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sp-session-tag.is-appointment {
+  color: var(--fd-primary);
+}
+.sp-session-tag.is-class {
+  color: var(--fd-tertiary);
+}
+.sp-session-desc {
+  font-size: 0.9rem;
+  color: var(--fd-on-surface);
+}
+.sp-session-time {
+  font-size: 0.8rem;
+  color: var(--fd-on-surface-variant);
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+/* Performance Metric */
+.sp-perf-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--fd-space-sm);
+}
+.sp-perf-nav {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--fd-primary-container);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 153, 255, 0.3);
+}
+.sp-perf-nav:hover {
+  filter: brightness(1.05);
+}
+.sp-perf-nav .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.sp-perf-charts {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--fd-space-sm);
+  min-width: 0;
+}
+
+.sp-chart-card {
+  border: 1px solid var(--fd-on-surface-variant);
+  border-radius: var(--fd-radius);
+  padding: 0.6rem 0.75rem 0.5rem;
+  min-width: 0;
+}
+.sp-chart-title {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--fd-on-surface);
+  margin-bottom: 0.35rem;
+}
+.sp-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sp-chart-caption {
+  font-size: 0.78rem;
+  color: var(--fd-on-surface);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.sp-chart-delta {
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--fd-tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.sp-chart-delta .material-symbols-outlined {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+  .sp-edit-btn {
+    right: var(--fd-space-sm);
+  }
+
+  .sp-perf-charts {
+    grid-template-columns: 1fr;
+  }
+  .sp-perf-nav {
+    display: none;
+  }
+  .sp-content {
+    margin-top: -1.75rem;
+  }
+  .sp-session-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .sp-session-time {
+    text-align: left;
+  }
+}

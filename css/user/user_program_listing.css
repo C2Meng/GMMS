@@ -62,15 +62,15 @@
 }
 
 .bg-program-1 {
-    background-image: url('../images/program-1.jpg');
+    background-image: url('../../images/program-1.jpg');
 }
 
 .bg-program-2 {
-    background-image: url('../images/program-2.jpg');
+    background-image: url('../../images/program-2.jpg');
 }
 
 .bg-program-3 {
-    background-image: url('../images/program-3.jpg');
+    background-image: url('../../images/program-3.jpg');
 }
 
 @media (max-width: 360px) {

@@ -58,22 +58,22 @@
 
 /* 4 Unique Backgrounds for Feature Cards */
 .bg-membership {
-    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-1.jpg') no-repeat center center;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../../images/feature-1.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .bg-class {
-    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-2.jpg') no-repeat center center;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../../images/feature-2.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .bg-trainer {
-    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-3.jpg') no-repeat center center;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../../images/feature-3.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .bg-evolution {
-    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../images/feature-4.jpg') no-repeat center center;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%), url('../../images/feature-4.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -113,17 +113,17 @@
 
 /* Specific images mapped to each card without the dark gradient mask */
 .deal-image.deal-1 {
-    background-image: url('../images/deal-1.jpg');
+    background-image: url('../../images/deal-1.jpg');
 }
 
 .deal-image.deal-2 {
-    background-image: url('../images/deal-2.jpg');
+    background-image: url('../../images/deal-2.jpg');
 }
 
 .deal-image.deal-3 {
-    background-image: url('../images/deal-3.jpg');
+    background-image: url('../../images/deal-3.jpg');
 }
 
 .deal-image.deal-4 {
-    background-image: url('../images/deal-4.jpg');
+    background-image: url('../../images/deal-4.jpg');
 }

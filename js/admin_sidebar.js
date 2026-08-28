@@ -14,19 +14,19 @@
         ["schedule.html", "calendar_month", "Schedule"],
         ["sessions.html", "open_in_full", "Sessions"],
         ["leads.html", "person_add", "Leads"],
-        ["../attendance_qr.html", "how_to_reg", "Attendance"],
-        ["../upcoming_billing.html", "leaderboard", "Reports"],
+        ["../user/user_attendance_qr.html", "how_to_reg", "Attendance"],
+        ["../user/user_upcoming_billing.html", "leaderboard", "Reports"],
         ["request.html", "help", "Requests"],
-        ["../upcoming_billing.html", "payments", "Payments"],
+        ["../user/user_upcoming_billing.html", "payments", "Payments"],
       ],
     },
     {
       label: "Administration",
       items: [
         ["plans.html", "description", "Plans"],
-        ["../freeze_cancel_request.html", "policy", "Policies"],
+        ["../user/user_freeze_cancel_request.html", "policy", "Policies"],
         ["staff.html", "work", "Staff"],
-        ["../feedback.html", "history", "Audit"],
+        ["../user/user_feedback.html", "history", "Audit"],
       ],
     },
   ];
@@ -50,7 +50,7 @@
     </div>
     <div class="offcanvas-body p-0">
       <div class="db-sidebar-body">
-        <a href="../attendance_qr.html" class="db-quick-checkin">
+        <a href="../user/user_attendance_qr.html" class="db-quick-checkin">
           <span class="material-symbols-outlined fill">bolt</span>
           Quick Check-in
         </a>
