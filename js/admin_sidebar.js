@@ -14,7 +14,7 @@
         ["schedule.html", "calendar_month", "Schedule"],
         ["sessions.html", "open_in_full", "Sessions"],
         ["leads.html", "person_add", "Leads"],
-        ["../user/user_upcoming_billing.html", "leaderboard", "Reports"],
+        ["report_listing.html", "leaderboard", "Reports"],
         ["request.html", "help", "Requests"],
       ],
     },
@@ -24,7 +24,6 @@
         ["plans.html", "description", "Plans"],
         ["policies.html", "policy", "Policies"],
         ["staff.html", "work", "Staff"],
-        ["../user/user_feedback.html", "history", "Audit"],
       ],
     },
   ];
