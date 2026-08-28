@@ -15,7 +15,7 @@
         ["sessions.html", "open_in_full", "Sessions"],
         ["leads.html", "person_add", "Leads"],
         ["../user/user_attendance_qr.html", "how_to_reg", "Attendance"],
-        ["../user/user_upcoming_billing.html", "leaderboard", "Reports"],
+        ["report_listing.html", "leaderboard", "Reports"],
         ["request.html", "help", "Requests"],
         ["../user/user_upcoming_billing.html", "payments", "Payments"],
       ],
