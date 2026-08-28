@@ -28,21 +28,20 @@
         <button
           type="button"
           aria-label="Go Back"
+          onclick="history.back()"
           class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
         >
           <i class="bi bi-arrow-left"></i>
         </button>
 
         <div class="fd-detail-heading">
-          <h1 class="fd-detail-title">USERNAME1 - TRIAL AND LEADS</h1>
-
-          <span class="badge rounded-pill fw-semibold px-3 py-2 fd-tertiary">
-            Active
-          </span>
-
-          <span class="badge rounded-pill fw-semibold px-3 py-2 fd-error">
-            Unconverted
-          </span>
+          <div class="fd-detail-title-row">
+            <h1 class="fd-detail-title">USERNAME1 - TRIAL AND LEADS</h1>
+            <span class="fd-detail-status fd-detail-status-active">Active</span>
+            <span class="fd-detail-status fd-detail-status-unconverted">
+              Unconverted
+            </span>
+          </div>
           <div class="fd-detail-breadcrumb">
             <span>Trial and Leads</span>
             <span class="material-symbols-outlined">chevron_right</span>
@@ -51,10 +50,7 @@
         </div>
       </div>
 
-      <button
-        type="button"
-        class="fd-detail-action btn btn-fd-primary py-2 px-4 rounded-pill small"
-      >
+      <button type="button" class="fd-detail-action btn btn-fd-primary small">
         Save
       </button>
     </header>
