@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/dashboard.css" rel="stylesheet" />
+    <link href="../css/profile.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="mp-page">
+      <!-- Header -->
+      <div class="mb-3">
+        <h1 class="mp-title">Member Profile</h1>
+        <div class="mp-breadcrumb">
+          <span>Members</span>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span>Jane Doe</span>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Left: Profile card -->
+        <div class="col-12 col-lg-5 col-xl-4">
+          <div class="fd-card no-hover h-100">
+            <!-- Head -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="mp-avatar">
+                <span class="material-symbols-outlined fill">person</span>
+              </div>
+              <div>
+                <div class="mp-name">Jane Doe</div>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="mp-badge mp-badge-success">Active</span>
+                  <span class="mp-badge mp-badge-info">Freeze Account</span>
+                  <span class="mp-badge mp-badge-danger">Penalise</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Info rows -->
+            <div>
+              <div class="mp-info-row">
+                <div class="mp-info-label">
+                  <span class="material-symbols-outlined">mail</span>
+                  <span>Email</span>
+                </div>
+                <div class="mp-info-value">jane.doe@gmail.com</div>
+              </div>
+              <div class="mp-info-row">
+                <div class="mp-info-label">
+                  <span class="material-symbols-outlined">call</span>
+                  <span>Phone</span>
+                </div>
+                <div class="mp-info-value">+60 12-345 6789</div>
+              </div>
+              <div class="mp-info-row">
+                <div class="mp-info-label">
+                  <span class="material-symbols-outlined">badge</span>
+                  <span>Plan</span>
+                </div>
+                <div class="mp-info-value">Standard Membership</div>
+              </div>
+              <div class="mp-info-row">
+                <div class="mp-info-label">
+                  <span class="material-symbols-outlined">event_available</span>
+                  <span>Member since</span>
+                </div>
+                <div class="mp-info-value">14 Feb 2023</div>
+              </div>
+            </div>
+
+            <!-- Recent activity -->
+            <div class="mp-activity-box">
+              <div class="mp-activity-title">RECENT ACTIVITY</div>
+              <ul class="mp-activity-list">
+                <li>
+                  <span class="mp-activity-icon mp-icon-warning">
+                    <span class="material-symbols-outlined fill"
+                      >priority_high</span
+                    >
+                  </span>
+                  <span>Pending payment (March)</span>
+                </li>
+                <li>
+                  <span class="mp-activity-icon mp-icon-danger">
+                    <span class="material-symbols-outlined fill">remove</span>
+                  </span>
+                  <span>Penalty applied for late cancellation</span>
+                </li>
+                <li>
+                  <span class="mp-activity-icon mp-icon-info">
+                    <span class="material-symbols-outlined">sync</span>
+                  </span>
+                  <span>Request for freeze/cancellation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Quick actions -->
+        <div class="col-12 col-lg-7 col-xl-8">
+          <div class="fd-card no-hover h-100 mp-actions-panel">
+            <div class="row g-3 mp-actions-grid">
+              <div class="col-6 d-flex">
+                <a href="#" class="mp-action-card">
+                  <span class="mp-action-icon mp-icon-bg-green">
+                    <span class="material-symbols-outlined"
+                      >currency_exchange</span
+                    >
+                  </span>
+                  <span class="mp-action-label">Record<br />Payment</span>
+                </a>
+              </div>
+              <div class="col-6 d-flex">
+                <a href="#" class="mp-action-card">
+                  <span class="mp-action-icon mp-icon-bg-purple">
+                    <span class="material-symbols-outlined"
+                      >calendar_add_on</span
+                    >
+                  </span>
+                  <span class="mp-action-label">Book<br />Session</span>
+                </a>
+              </div>
+              <div class="col-6 d-flex">
+                <a href="#" class="mp-action-card">
+                  <span class="mp-action-icon mp-icon-bg-orange">
+                    <span class="material-symbols-outlined">request_quote</span>
+                  </span>
+                  <span class="mp-action-label">Billing<br />History</span>
+                </a>
+              </div>
+              <div class="col-6 d-flex">
+                <a href="#" class="mp-action-card">
+                  <span class="mp-action-icon mp-icon-bg-indigo">
+                    <span class="material-symbols-outlined">history</span>
+                  </span>
+                  <span class="mp-action-label"
+                    >Membership &amp;<br />Class History</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin_sidebar.js"></script>
+  </body>
+</html>
