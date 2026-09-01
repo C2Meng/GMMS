@@ -21,6 +21,30 @@
   </head>
 
   <body class="bg-fd-surface-container-low fd-readable-list">
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+          onclick="history.back()"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Trials and Leads</h1>
+          <nav class="fd-detail-breadcrumb" aria-label="Breadcrumb">
+            <span>Management</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span aria-current="page">Trials and Leads</span>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <div>
       <div class="container-fluid px-3 px-md-5 py-4 py-md-5">
         <div class="fd-card no-hover mx-auto" style="max-width: 1100px">
@@ -35,9 +59,12 @@
               >
             </div>
 
-            <div
-              class="d-flex align-items-center gap-4 flex-grow-1 justify-content-end"
-            >
+            <div class="fd-list-toolbar-actions">
+              <button type="button" class="fd-list-filter-btn">
+                <i class="bi bi-funnel"></i>
+                <span>Filter</span>
+              </button>
+
               <div
                 class="input-group rounded-pill border overflow-hidden"
                 style="max-width: 320px"
@@ -48,8 +75,8 @@
                 <input
                   type="text"
                   class="form-control border-0 py-2"
-                  placeholder="Search for plan"
-                  aria-label="Search for plan"
+                  placeholder="Search for lead"
+                  aria-label="Search for lead"
                 />
               </div>
 
@@ -57,7 +84,7 @@
                 href="#"
                 class="fd-text-link d-inline-flex align-items-center gap-1 text-nowrap"
               >
-                <i class="bi bi-funnel"></i> Add Plan
+                <i class="bi bi-plus-lg"></i> Add Lead
               </a>
             </div>
           </div>
@@ -131,22 +158,22 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="201"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select lead Sarah Ng"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">201</td>
                   <td class="small">
                     <a href="lead_details.html" class="fd-text-link"
-                      >Aimmanudin bin aiman</a
+                      >Sarah Ng</a
                     >
                   </td>
                   <td class="small text-fd-on-surface-variant">
-                    gmail@gmail.com
+                    sarah.ng@gmail.com
                   </td>
-                  <td class="small text-fd-on-surface-variant">1-SEP-2026</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
+                  <td class="small text-fd-on-surface-variant">05 Sep 2026</td>
+                  <td class="small text-fd-on-surface-variant">19 Sep 2026</td>
                   <td class="small text-fd-primary fw-semibold">Instagram</td>
                   <td class="small text-fd-primary fw-semibold">Trial</td>
                   <td class="px-4">
@@ -162,22 +189,24 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="202"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select lead Darren Teo"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">202</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">Aimmanudin bin aiman</a>
+                    <a href="lead_details.html" class="fd-text-link"
+                      >Darren Teo</a
+                    >
                   </td>
                   <td class="small text-fd-on-surface-variant">
-                    gmail@gmail.com
+                    darren.teo@outlook.com
                   </td>
-                  <td class="small text-fd-on-surface-variant">1-SEP-2026</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-                  <td class="small text-fd-primary fw-semibold">Instagram</td>
-                  <td class="small text-fd-primary fw-semibold">Trial</td>
+                  <td class="small text-fd-on-surface-variant">12 Sep 2026</td>
+                  <td class="small text-fd-on-surface-variant">27 Sep 2026</td>
+                  <td class="small text-fd-primary fw-semibold">Google Ads</td>
+                  <td class="small text-fd-primary fw-semibold">Qualified</td>
                   <td class="px-4">
                     <i
                       class="bi bi-chevron-down text-fd-on-surface-variant"
@@ -191,21 +220,85 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="203"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select lead Mei Ling"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">203</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">Aimmanudin bin aiman</a>
+                    <a href="lead_details.html" class="fd-text-link"
+                      >Mei Ling</a
+                    >
                   </td>
                   <td class="small text-fd-on-surface-variant">
-                    gmail@gmail.com
+                    mei.ling@gmail.com
                   </td>
-                  <td class="small text-fd-on-surface-variant">1-SEP-2026</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-                  <td class="small text-fd-primary fw-semibold">Instagram</td>
+                  <td class="small text-fd-on-surface-variant">18 Sep 2026</td>
+                  <td class="small text-fd-on-surface-variant">02 Oct 2026</td>
+                  <td class="small text-fd-primary fw-semibold">Referral</td>
+                  <td class="small text-fd-primary fw-semibold">Follow Up</td>
+                  <td class="px-4">
+                    <i
+                      class="bi bi-chevron-down text-fd-on-surface-variant"
+                    ></i>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input
+                      class="form-check-input plan-row-checkbox"
+                      type="checkbox"
+                      name="selectedPlans"
+                      value="204"
+                      data-plan-checkbox
+                      aria-label="Select lead Kenneth Ooi"
+                    />
+                  </td>
+                  <td class="small fw-bold text-fd-on-surface">204</td>
+                  <td class="small">
+                    <a href="lead_details.html" class="fd-text-link"
+                      >Kenneth Ooi</a
+                    >
+                  </td>
+                  <td class="small text-fd-on-surface-variant">
+                    kenneth.ooi@icloud.com
+                  </td>
+                  <td class="small text-fd-on-surface-variant">21 Sep 2026</td>
+                  <td class="small text-fd-on-surface-variant">06 Oct 2026</td>
+                  <td class="small text-fd-primary fw-semibold">Facebook</td>
+                  <td class="small text-fd-primary fw-semibold">Converted</td>
+                  <td class="px-4">
+                    <i
+                      class="bi bi-chevron-down text-fd-on-surface-variant"
+                    ></i>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input
+                      class="form-check-input plan-row-checkbox"
+                      type="checkbox"
+                      name="selectedPlans"
+                      value="205"
+                      data-plan-checkbox
+                      aria-label="Select lead Nadia Ismail"
+                    />
+                  </td>
+                  <td class="small fw-bold text-fd-on-surface">205</td>
+                  <td class="small">
+                    <a href="lead_details.html" class="fd-text-link"
+                      >Nadia Ismail</a
+                    >
+                  </td>
+                  <td class="small text-fd-on-surface-variant">
+                    nadia.i@gmail.com
+                  </td>
+                  <td class="small text-fd-on-surface-variant">24 Sep 2026</td>
+                  <td class="small text-fd-on-surface-variant">09 Oct 2026</td>
+                  <td class="small text-fd-primary fw-semibold">Website</td>
                   <td class="small text-fd-primary fw-semibold">Trial</td>
                   <td class="px-4">
                     <i

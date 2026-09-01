@@ -21,6 +21,30 @@
     <link href="../css/admin/dashboard.css" rel="stylesheet" />
   </head>
   <body class="bg-fd-surface-container-low fd-readable-list">
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+          onclick="history.back()"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Requests</h1>
+          <nav class="fd-detail-breadcrumb" aria-label="Breadcrumb">
+            <span>Management</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span aria-current="page">Requests</span>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <div>
       <div class="container-fluid px-3 px-md-5 py-4 py-md-5">
         <div class="fd-card no-hover mx-auto" style="max-width: 1100px">
@@ -35,9 +59,12 @@
               >
             </div>
 
-            <div
-              class="d-flex align-items-center gap-4 flex-grow-1 justify-content-end"
-            >
+            <div class="fd-list-toolbar-actions">
+              <button type="button" class="fd-list-filter-btn">
+                <i class="bi bi-funnel"></i>
+                <span>Filter</span>
+              </button>
+
               <div
                 class="input-group rounded-pill border overflow-hidden"
                 style="max-width: 320px"
@@ -48,8 +75,8 @@
                 <input
                   type="text"
                   class="form-control border-0 py-2"
-                  placeholder="Search for session"
-                  aria-label="Search for session"
+                  placeholder="Search for request"
+                  aria-label="Search for request"
                 />
               </div>
 
@@ -57,7 +84,7 @@
                 href="#"
                 class="fd-text-link d-inline-flex align-items-center gap-1 text-nowrap"
               >
-                <i class="bi bi-funnel"></i> Add Session
+                <i class="bi bi-plus-lg"></i> Add Request
               </a>
             </div>
           </div>
@@ -130,18 +157,17 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="session-1"
-                      for="session-1"
+                      id="request-1"
+                      for="request-1"
                     />
                   </td>
-                  <td class="fw-bold text-fd-on-surface">1</td>
+                  <td class="fw-bold text-fd-on-surface">R-104</td>
                   <td class="small text-fd-on-surface-variant">
-                    <a href="request_details.html">YOGA SESSION</a>
+                    <a href="request_details.html">Membership Freeze</a>
                   </td>
-                  <td class="small text-fd-on-surface">YOGA</td>
-                  <td class="small text-fd-on-surface">MONDAY</td>
-                  <td class="small text-fd-on-surface">2023-10-10</td>
-                  <td class="small text-fd-on-surface">$20.00</td>
+                  <td class="small text-fd-on-surface">Freeze</td>
+                  <td class="small text-fd-on-surface">09 Oct 2026</td>
+                  <td class="small text-fd-on-surface">Medical leave</td>
                   <td>
                     <div class="px-4">
                       <i
@@ -156,16 +182,17 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="session-1"
-                      for="session-1"
+                      id="request-2"
+                      for="request-2"
                     />
                   </td>
-                  <td class="fw-bold text-fd-on-surface">2</td>
-                  <td class="text-fd-on-surface">Yoga Session</td>
-                  <td class="text-fd-on-surface">Yoga</td>
-                  <td class="text-fd-on-surface">Monday</td>
-                  <td class="text-fd-on-surface">2023-10-10</td>
-                  <td class="text-fd-on-surface">$20.00</td>
+                  <td class="fw-bold text-fd-on-surface">R-116</td>
+                  <td class="small text-fd-on-surface-variant">
+                    <a href="request_details.html">PT Package Upgrade</a>
+                  </td>
+                  <td class="small text-fd-on-surface">Upgrade</td>
+                  <td class="small text-fd-on-surface">12 Oct 2026</td>
+                  <td class="small text-fd-on-surface">Needs more coaching</td>
                   <td>
                     <div class="px-4">
                       <i
@@ -180,16 +207,17 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="session-1"
-                      for="session-1"
+                      id="request-3"
+                      for="request-3"
                     />
                   </td>
-                  <td class="fw-bold text-fd-on-surface">3</td>
-                  <td class="text-fd-on-surface">Yoga Session</td>
-                  <td class="text-fd-on-surface">Yoga</td>
-                  <td class="text-fd-on-surface">Monday</td>
-                  <td class="text-fd-on-surface">2023-10-10</td>
-                  <td class="text-fd-on-surface">$20.00</td>
+                  <td class="fw-bold text-fd-on-surface">R-121</td>
+                  <td class="small text-fd-on-surface-variant">
+                    <a href="request_details.html">Yoga Class Cancellation</a>
+                  </td>
+                  <td class="small text-fd-on-surface">Cancellation</td>
+                  <td class="small text-fd-on-surface">15 Oct 2026</td>
+                  <td class="small text-fd-on-surface">Work conflict</td>
                   <td>
                     <div class="px-4">
                       <i
@@ -204,16 +232,44 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="session-1"
-                      for="session-1"
+                      id="request-4"
+                      for="request-4"
                     />
                   </td>
-                  <td class="fw-bold text-fd-on-surface">4</td>
-                  <td class="text-fd-on-surface">Yoga Session</td>
-                  <td class="text-fd-on-surface">Yoga</td>
-                  <td class="text-fd-on-surface">Monday</td>
-                  <td class="text-fd-on-surface">2023-10-10</td>
-                  <td class="text-fd-on-surface">$20.00</td>
+                  <td class="fw-bold text-fd-on-surface">R-128</td>
+                  <td class="small text-fd-on-surface-variant">
+                    <a href="request_details.html">Refund Request</a>
+                  </td>
+                  <td class="small text-fd-on-surface">Refund</td>
+                  <td class="small text-fd-on-surface">17 Oct 2026</td>
+                  <td class="small text-fd-on-surface">
+                    Double charged for session
+                  </td>
+                  <td>
+                    <div class="px-4">
+                      <i
+                        class="bi bi-chevron-down text-fd-on-surface-variant"
+                      ></i>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="request-5"
+                      for="request-5"
+                    />
+                  </td>
+                  <td class="fw-bold text-fd-on-surface">R-133</td>
+                  <td class="small text-fd-on-surface-variant">
+                    <a href="request_details.html">Schedule Change</a>
+                  </td>
+                  <td class="small text-fd-on-surface">Reschedule</td>
+                  <td class="small text-fd-on-surface">18 Oct 2026</td>
+                  <td class="small text-fd-on-surface">Travel out of town</td>
                   <td>
                     <div class="px-4">
                       <i

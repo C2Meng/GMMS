@@ -21,6 +21,30 @@
   </head>
 
   <body class="bg-fd-surface-container-low fd-readable-list">
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+          onclick="history.back()"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Staff</h1>
+          <nav class="fd-detail-breadcrumb" aria-label="Breadcrumb">
+            <span>Management</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span aria-current="page">Staff</span>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <div>
       <div class="container-fluid px-3 px-md-5 py-4 py-md-5">
         <div class="fd-card no-hover mx-auto" style="max-width: 1100px">
@@ -35,9 +59,12 @@
               >
             </div>
 
-            <div
-              class="d-flex align-items-center gap-4 flex-grow-1 justify-content-end"
-            >
+            <div class="fd-list-toolbar-actions">
+              <button type="button" class="fd-list-filter-btn">
+                <i class="bi bi-funnel"></i>
+                <span>Filter</span>
+              </button>
+
               <div
                 class="input-group rounded-pill border overflow-hidden"
                 style="max-width: 320px"
@@ -48,8 +75,8 @@
                 <input
                   type="text"
                   class="form-control border-0 py-2"
-                  placeholder="Search for plan"
-                  aria-label="Search for plan"
+                  placeholder="Search for staff"
+                  aria-label="Search for staff"
                 />
               </div>
 
@@ -57,7 +84,7 @@
                 href="#"
                 class="fd-text-link d-inline-flex align-items-center gap-1 text-nowrap"
               >
-                <i class="bi bi-funnel"></i> Add Plan
+                <i class="bi bi-plus-lg"></i> Add Staff
               </a>
             </div>
           </div>
@@ -125,22 +152,22 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="ST-201"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select staff Aisha Rahman"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">ST-201</td>
                   <td class="small">
                     <a href="staff_profile.html" class="fd-text-link"
-                      >Aimmanudin bin aiman</a
+                      >Aisha Rahman</a
                     >
                   </td>
-                  <td class="small text-fd-on-surface-variant">CLASS</td>
+                  <td class="small text-fd-on-surface-variant">Lead Coach</td>
                   <td class="small text-fd-on-surface-variant">
-                    MONDAY TUESDAY
+                    Mon &amp; Wed
                   </td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
+                  <td class="small text-fd-on-surface-variant">12 Mar 2023</td>
                   <td class="small text-fd-primary fw-semibold">ACTIVE</td>
                   <td class="px-4">
                     <i
@@ -154,19 +181,22 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="ST-204"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select staff Daniel Koh"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">ST-204</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
+                    <a href="staff_profile.html" class="fd-text-link"
+                      >Daniel Koh</a
+                    >
                   </td>
-                  <td class="small text-fd-on-surface-variant">CLASS</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
+                  <td class="small text-fd-on-surface-variant">PT Coach</td>
+                  <td class="small text-fd-on-surface-variant">
+                    Tue &amp; Thu
+                  </td>
+                  <td class="small text-fd-on-surface-variant">08 Jul 2022</td>
                   <td class="small text-fd-primary fw-semibold">ACTIVE</td>
                   <td class="px-4">
                     <i
@@ -180,19 +210,24 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="ST-208"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select staff Priya Nair"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">ST-208</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
+                    <a href="staff_profile.html" class="fd-text-link"
+                      >Priya Nair</a
+                    >
                   </td>
-                  <td class="small text-fd-on-surface-variant">CLASS</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
+                  <td class="small text-fd-on-surface-variant">
+                    Yoga Instructor
+                  </td>
+                  <td class="small text-fd-on-surface-variant">
+                    Fri &amp; Sat
+                  </td>
+                  <td class="small text-fd-on-surface-variant">17 Nov 2021</td>
                   <td class="small text-fd-primary fw-semibold">ACTIVE</td>
                   <td class="px-4">
                     <i
@@ -206,19 +241,22 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="ST-210"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select staff Chloe Lim"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">ST-210</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
+                    <a href="staff_profile.html" class="fd-text-link"
+                      >Chloe Lim</a
+                    >
                   </td>
-                  <td class="small text-fd-on-surface-variant">CLASS</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
+                  <td class="small text-fd-on-surface-variant">
+                    Group Trainer
+                  </td>
+                  <td class="small text-fd-on-surface-variant">Sun</td>
+                  <td class="small text-fd-on-surface-variant">03 Jan 2024</td>
                   <td class="small text-fd-primary fw-semibold">ACTIVE</td>
                   <td class="px-4">
                     <i
@@ -232,109 +270,26 @@
                       class="form-check-input plan-row-checkbox"
                       type="checkbox"
                       name="selectedPlans"
-                      value="110"
+                      value="ST-214"
                       data-plan-checkbox
-                      aria-label="Select plan"
+                      aria-label="Select staff Hafiz Ismail"
                     />
                   </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
+                  <td class="small fw-bold text-fd-on-surface">ST-214</td>
                   <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
+                    <a href="staff_profile.html" class="fd-text-link"
+                      >Hafiz Ismail</a
+                    >
                   </td>
-                  <td class="small text-fd-on-surface-variant">CLASS</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
+                  <td class="small text-fd-on-surface-variant">
+                    Conditioning Coach
+                  </td>
+                  <td class="small text-fd-on-surface-variant">
+                    Mon &amp; Thu
+                  </td>
+                  <td class="small text-fd-on-surface-variant">14 Apr 2023</td>
                   <td class="small text-fd-primary fw-semibold">ACTIVE</td>
                   <td class="px-4">
-                    <i
-                      class="bi bi-chevron-down text-fd-on-surface-variant"
-                    ></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      class="form-check-input plan-row-checkbox"
-                      type="checkbox"
-                      name="selectedPlans"
-                      value="110"
-                      data-plan-checkbox
-                      aria-label="Select plan"
-                    />
-                  </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
-                  <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
-                  </td>
-                  <td class="small text-fd-on-surface-variant">PROGRAM</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
-                  <td class="small text-fd-primary fw-semibold">ACTIVE</td>
-                  <td class="px-4">
-                    <i
-                      class="bi bi-chevron-down text-fd-on-surface-variant"
-                    ></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      class="form-check-input plan-row-checkbox"
-                      type="checkbox"
-                      name="selectedPlans"
-                      value="110"
-                      data-plan-checkbox
-                      aria-label="Select plan"
-                    />
-                  </td>
-                  <td class="small fw-bold text-fd-on-surface">110</td>
-                  <td class="small">
-                    <a href="#" class="fd-text-link">PLAN</a>
-                  </td>
-                  <td class="small text-fd-on-surface-variant">PROGRAM</td>
-                  <td class="small text-fd-on-surface-variant">MONDAY</td>
-                  <td class="small text-fd-on-surface-variant">3-SEP-2026</td>
-
-                  <td class="small text-fd-primary fw-semibold">ACTIVE</td>
-                  <td class="px-4">
-                    <i
-                      class="bi bi-chevron-down text-fd-on-surface-variant"
-                    ></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      class="form-check-input plan-row-checkbox"
-                      type="checkbox"
-                      name="selectedPlans"
-                      value="110"
-                      data-plan-checkbox
-                      aria-label="Select plan"
-                    />
-                  </td>
-                  <td class="small fw-bold text-fd-on-surface border-bottom-0">
-                    110
-                  </td>
-                  <td class="small border-bottom-0">
-                    <a href="#" class="fd-text-link">PLAN</a>
-                  </td>
-                  <td class="small text-fd-on-surface-variant border-bottom-0">
-                    APPOINTMENT
-                  </td>
-                  <td class="small text-fd-on-surface-variant border-bottom-0">
-                    MONDAY
-                  </td>
-                  <td class="small text-fd-on-surface-variant border-bottom-0">
-                    3-SEP-2026
-                  </td>
-
-                  <td class="small text-fd-primary fw-semibold border-bottom-0">
-                    ACTIVE
-                  </td>
-                  <td class="border-bottom-0 px-4">
                     <i
                       class="bi bi-chevron-down text-fd-on-surface-variant"
                     ></i>
