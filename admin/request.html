@@ -21,6 +21,30 @@
     <link href="../css/admin/dashboard.css" rel="stylesheet" />
   </head>
   <body class="bg-fd-surface-container-low fd-readable-list">
+    <header
+      class="fd-detail-header w-100 d-flex align-items-center justify-content-between"
+    >
+      <div class="fd-detail-header-left d-flex align-items-center gap-3">
+        <button
+          type="button"
+          class="fd-detail-back d-inline-flex align-items-center justify-content-center rounded-circle"
+          aria-label="Go Back"
+          onclick="history.back()"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <div class="fd-detail-heading">
+          <h1 class="fd-detail-title">Requests</h1>
+          <nav class="fd-detail-breadcrumb" aria-label="Breadcrumb">
+            <span>Management</span>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span aria-current="page">Requests</span>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <div>
       <div class="container-fluid px-3 px-md-5 py-4 py-md-5">
         <div class="fd-card no-hover mx-auto" style="max-width: 1100px">
