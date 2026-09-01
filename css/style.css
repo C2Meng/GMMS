@@ -1421,6 +1421,52 @@ body {
   color: #7f8b9c;
 }
 
+.fd-list-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.fd-list-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--fd-primary);
+  border-radius: var(--fd-radius-lg);
+  background-color: transparent;
+  color: var(--fd-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fd-list-filter-btn:hover,
+.fd-list-filter-btn:focus-visible {
+  background-color: var(--fd-surface-container);
+  box-shadow: 0 0 0 0.2rem rgba(50, 89, 165, 0.08);
+  color: var(--fd-primary);
+  outline: none;
+}
+
+.fd-list-filter-btn:active {
+  transform: translateY(1px);
+}
+
+.fd-list-filter-btn:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
 .fd-list-add {
   display: inline-flex;
   align-items: center;
@@ -1602,6 +1648,15 @@ body {
 
   .fd-list-tools {
     justify-content: space-between;
+  }
+
+  .fd-list-toolbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .fd-list-filter-btn {
+    flex: 0 0 auto;
   }
 
   .fd-list-search {
