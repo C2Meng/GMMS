@@ -46,10 +46,18 @@
         </div>
       </div>
       <div class="fd-detail-actions">
-        <button type="button" class="fd-detail-action btn btn-fd-primary">
+        <button
+          id="editPlanBtn"
+          type="button"
+          class="fd-detail-action btn btn-fd-primary"
+        >
           Edit
         </button>
-        <button type="button" class="fd-detail-action btn btn-fd-primary">
+        <button
+          id="savePlanBtn"
+          type="button"
+          class="fd-detail-action btn btn-fd-primary d-none"
+        >
           Save
         </button>
       </div>
@@ -58,290 +66,305 @@
     <div class="flex-grow-1 w-100">
       <main class="container-fluid px-4 px-md-5 py-5">
         <div class="w-100 mx-auto">
-          <!-- Session Details Header -->
           <section class="fd-card no-hover p-4 w-100 overflow-hidden">
-            <h1 class="fw-bold fs-2 mb-4 text-fd-on-surface">DemoPlan1</h1>
-
-            <div class="row g-4 border-bottom pb-4">
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Number of student:
-                  </span>
-                  <span class="fw-medium">8/10</span>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Location:
-                  </span>
-                  <span class="fw-medium">RoomA</span>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Trainer ID:
-                  </span>
-                  <span class="fw-medium">xxxxxx1234</span>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Session ID:
-                  </span>
-                  <span class="fw-medium">xxxx1234</span>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Trainer:
-                  </span>
-                  <span class="fw-medium">John Lim</span>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6">
-                <div class="d-flex flex-column gap-1">
-                  <span
-                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
-                  >
-                    Session ID:
-                  </span>
-                  <span class="fw-medium">xxxx1234</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Attendance Table -->
-          <section class="fd-card no-hover p-4 w-100 overflow-hidden">
-            <!-- Table Header Controls -->
             <div
-              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3 w-100 mb-4"
+              class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4"
             >
               <div>
-                <h2 class="fw-bold fs-4 mb-1 text-fd-on-surface">Sessions</h2>
-                <p class="font-monospace small text-fd-on-surface-variant mb-0">
-                  12 total · 7 active
+                <h1
+                  id="planTitleDisplay"
+                  class="fw-bold fs-2 mb-1 text-fd-on-surface"
+                >
+                  Starter Fit Plan
+                </h1>
+                <p class="text-fd-on-surface-variant mb-0">
+                  Membership plan overview
                 </p>
               </div>
-
-              <div
-                class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 w-auto ms-auto"
+              <span
+                id="planStatusBadge"
+                class="badge rounded-pill bg-success-subtle text-success-emphasis px-3 py-2"
               >
-                <button type="button" class="fd-list-filter-btn">
-                  <i class="bi bi-funnel"></i>
-                  <span>Filter</span>
-                </button>
+                Active
+              </span>
+            </div>
 
-                <div class="fd-list-search">
-                  <i class="bi bi-search"></i>
-                  <input
-                    type="text"
-                    class="form-control-plaintext"
-                    placeholder="Search for session"
-                    aria-label="Search for session"
-                  />
+            <div id="planReadOnly" class="row g-4 border-bottom pb-4">
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Plan ID</span
+                  >
+                  <span id="planIdText" class="fw-medium">PF-2301</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Plan type</span
+                  >
+                  <span id="planTypeText" class="fw-medium"
+                    >Unlimited Access</span
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Capacity</span
+                  >
+                  <span id="planCapacityText" class="fw-medium"
+                    >40 members</span
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Duration</span
+                  >
+                  <span id="planDurationText" class="fw-medium">12 months</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Price</span
+                  >
+                  <span id="planPriceText" class="fw-medium"
+                    >RM 89.00 / month</span
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Status</span
+                  >
+                  <span id="planStatusText" class="fw-medium">Active</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Start date</span
+                  >
+                  <span id="planStartText" class="fw-medium">01 Jan 2026</span>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >End date</span
+                  >
+                  <span id="planEndText" class="fw-medium">31 Dec 2026</span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="d-flex flex-column gap-1">
+                  <span
+                    class="font-monospace text-uppercase small fw-semibold text-fd-on-surface-variant"
+                    >Description</span
+                  >
+                  <span id="planDescriptionText" class="fw-medium">
+                    Ideal for members who want flexible access to gym equipment,
+                    group classes, and personal training discounts.
+                  </span>
                 </div>
               </div>
             </div>
 
-            <!-- Data Table -->
+            <form id="planForm" class="row g-4 d-none">
+              <div class="col-12 col-md-6">
+                <label for="planNameInput" class="form-label fw-semibold"
+                  >Plan name</label
+                >
+                <input
+                  id="planNameInput"
+                  class="form-control"
+                  type="text"
+                  value="Starter Fit Plan"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planIdInput" class="form-label fw-semibold"
+                  >Plan ID</label
+                >
+                <input
+                  id="planIdInput"
+                  class="form-control"
+                  type="text"
+                  value="PF-2301"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planTypeInput" class="form-label fw-semibold"
+                  >Plan type</label
+                >
+                <input
+                  id="planTypeInput"
+                  class="form-control"
+                  type="text"
+                  value="Unlimited Access"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planCapacityInput" class="form-label fw-semibold"
+                  >Capacity</label
+                >
+                <input
+                  id="planCapacityInput"
+                  class="form-control"
+                  type="text"
+                  value="40 members"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planDurationInput" class="form-label fw-semibold"
+                  >Duration</label
+                >
+                <input
+                  id="planDurationInput"
+                  class="form-control"
+                  type="text"
+                  value="12 months"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planPriceInput" class="form-label fw-semibold"
+                  >Price</label
+                >
+                <input
+                  id="planPriceInput"
+                  class="form-control"
+                  type="text"
+                  value="RM 89.00 / month"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planStatusInput" class="form-label fw-semibold"
+                  >Status</label
+                >
+                <select id="planStatusInput" class="form-select">
+                  <option selected>Active</option>
+                  <option>Draft</option>
+                  <option>Paused</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planStartInput" class="form-label fw-semibold"
+                  >Start date</label
+                >
+                <input
+                  id="planStartInput"
+                  class="form-control"
+                  type="date"
+                  value="2026-01-01"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="planEndInput" class="form-label fw-semibold"
+                  >End date</label
+                >
+                <input
+                  id="planEndInput"
+                  class="form-control"
+                  type="date"
+                  value="2026-12-31"
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="planDescriptionInput" class="form-label fw-semibold"
+                  >Description</label
+                >
+                <textarea
+                  id="planDescriptionInput"
+                  class="form-control"
+                  rows="4"
+                >
+Ideal for members who want flexible access to gym equipment, group classes, and personal training discounts.</textarea
+                >
+              </div>
+            </form>
+          </section>
+
+          <section class="fd-card no-hover p-4 w-100 overflow-hidden mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h2 class="fw-bold fs-4 mb-1 text-fd-on-surface">
+                  Members on this plan
+                </h2>
+                <p class="font-monospace small text-fd-on-surface-variant mb-0">
+                  8 active members
+                </p>
+              </div>
+            </div>
+
             <div class="fd-list-scroll w-100">
               <table class="fd-list-table table align-middle mb-0 w-100">
                 <thead>
                   <tr>
-                    <th scope="col" class="text-center">
-                      <span class="visually-hidden">Select</span>
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </th>
-                    <th scope="col">
-                      ID
-                      <i class="bi bi-chevron-up ms-1 text-fd-primary"></i>
-                    </th>
-                    <th scope="col">NAME</th>
-                    <th scope="col">DAY</th>
-                    <th scope="col">DUE DATE</th>
-                    <th scope="col">PRICE</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col" class="text-center">ATTENDANCE</th>
+                    <th scope="col">Member</th>
+                    <th scope="col">Joined</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Last visit</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   <tr>
-                    <td class="text-center">
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </td>
-                    <td>1048</td>
-                    <td class="fw-semibold">
-                      <a href="member_profile.html" class="fd-text-link"
-                        >Jane Doe</a
-                      >
-                    </td>
-                    <td>MONDAY</td>
-                    <td>03-SEP-2026</td>
-                    <td>RM 350.00</td>
+                    <td class="fw-semibold">Jane Doe</td>
+                    <td>02 Jan 2026</td>
+                    <td>Paid</td>
                     <td><span class="fd-list-status">ACTIVE</span></td>
-                    <td class="text-center">
-                      <div
-                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          role="switch"
-                          checked
-                          aria-label="Attendance for Jane Doe"
-                        />
-                      </div>
-                    </td>
+                    <td>17 Aug 2026</td>
                   </tr>
                   <tr>
-                    <td class="text-center">
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </td>
-                    <td>1021</td>
-                    <td class="fw-semibold">
-                      <a href="member_profile.html" class="fd-text-link"
-                        >Marcus Lee</a
-                      >
-                    </td>
-                    <td>WEDNESDAY</td>
-                    <td>05-SEP-2026</td>
-                    <td>RM 280.00</td>
+                    <td class="fw-semibold">Marcus Lee</td>
+                    <td>15 Jan 2026</td>
+                    <td>Paid</td>
                     <td><span class="fd-list-status">ACTIVE</span></td>
-                    <td class="text-center">
-                      <div
-                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          role="switch"
-                          checked
-                          aria-label="Attendance for Marcus Lee"
-                        />
-                      </div>
-                    </td>
+                    <td>18 Aug 2026</td>
                   </tr>
                   <tr>
-                    <td class="text-center">
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </td>
-                    <td>0996</td>
-                    <td class="fw-semibold">
-                      <a href="member_profile.html" class="fd-text-link"
-                        >Alicia Tan</a
-                      >
-                    </td>
-                    <td>FRIDAY</td>
-                    <td>11-SEP-2026</td>
-                    <td>RM 210.00</td>
+                    <td class="fw-semibold">Alicia Tan</td>
+                    <td>04 Feb 2026</td>
+                    <td>Due in 5 days</td>
                     <td><span class="fd-list-status">PENDING</span></td>
-                    <td class="text-center">
-                      <div
-                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          role="switch"
-                          aria-label="Attendance for Alicia Tan"
-                        />
-                      </div>
-                    </td>
+                    <td>12 Aug 2026</td>
                   </tr>
                   <tr>
-                    <td class="text-center">
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </td>
-                    <td>0974</td>
-                    <td class="fw-semibold">
-                      <a href="member_profile.html" class="fd-text-link"
-                        >Daniel Wong</a
-                      >
-                    </td>
-                    <td>SATURDAY</td>
-                    <td>14-SEP-2026</td>
-                    <td>RM 420.00</td>
+                    <td class="fw-semibold">Daniel Wong</td>
+                    <td>21 Mar 2026</td>
+                    <td>Paid</td>
                     <td><span class="fd-list-status">ACTIVE</span></td>
-                    <td class="text-center">
-                      <div
-                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          role="switch"
-                          checked
-                          aria-label="Attendance for Daniel Wong"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">
-                      <span
-                        class="d-inline-block bg-fd-surface-container-highest rounded"
-                        style="width: 16px; height: 16px"
-                      ></span>
-                    </td>
-                    <td>0917</td>
-                    <td class="fw-semibold">
-                      <a href="member_profile.html" class="fd-text-link"
-                        >Sarah Lim</a
-                      >
-                    </td>
-                    <td>THURSDAY</td>
-                    <td>17-SEP-2026</td>
-                    <td>RM 65.00</td>
-                    <td><span class="fd-list-status">FROZEN</span></td>
-                    <td class="text-center">
-                      <div
-                        class="form-check form-switch d-inline-flex justify-content-center mb-0"
-                      >
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          role="switch"
-                          aria-label="Attendance for Sarah Lim"
-                        />
-                      </div>
-                    </td>
+                    <td>20 Aug 2026</td>
                   </tr>
                 </tbody>
               </table>
@@ -353,5 +376,94 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/admin_sidebar.js"></script>
+    <script>
+      const editPlanBtn = document.getElementById("editPlanBtn");
+      const savePlanBtn = document.getElementById("savePlanBtn");
+      const planReadOnly = document.getElementById("planReadOnly");
+      const planForm = document.getElementById("planForm");
+
+      const planTitleDisplay = document.getElementById("planTitleDisplay");
+      const planStatusBadge = document.getElementById("planStatusBadge");
+      const planStatusText = document.getElementById("planStatusText");
+
+      const planNameInput = document.getElementById("planNameInput");
+      const planIdInput = document.getElementById("planIdInput");
+      const planTypeInput = document.getElementById("planTypeInput");
+      const planCapacityInput = document.getElementById("planCapacityInput");
+      const planDurationInput = document.getElementById("planDurationInput");
+      const planPriceInput = document.getElementById("planPriceInput");
+      const planStatusInput = document.getElementById("planStatusInput");
+      const planStartInput = document.getElementById("planStartInput");
+      const planEndInput = document.getElementById("planEndInput");
+      const planDescriptionInput = document.getElementById(
+        "planDescriptionInput",
+      );
+
+      function formatDate(dateValue) {
+        if (!dateValue) return "";
+        const date = new Date(dateValue + "T00:00:00");
+        return new Intl.DateTimeFormat("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+        }).format(date);
+      }
+
+      function setEditMode(isEditing) {
+        planReadOnly.classList.toggle("d-none", isEditing);
+        planForm.classList.toggle("d-none", !isEditing);
+        editPlanBtn.classList.toggle("d-none", isEditing);
+        savePlanBtn.classList.toggle("d-none", !isEditing);
+      }
+
+      editPlanBtn.addEventListener("click", function () {
+        setEditMode(true);
+      });
+
+      savePlanBtn.addEventListener("click", function () {
+        const updatedName = planNameInput.value.trim() || "Plan";
+        const updatedStatus = planStatusInput.value;
+
+        document.getElementById("planIdText").textContent =
+          planIdInput.value.trim();
+        document.getElementById("planTypeText").textContent =
+          planTypeInput.value.trim();
+        document.getElementById("planCapacityText").textContent =
+          planCapacityInput.value.trim();
+        document.getElementById("planDurationText").textContent =
+          planDurationInput.value.trim();
+        document.getElementById("planPriceText").textContent =
+          planPriceInput.value.trim();
+        document.getElementById("planStatusText").textContent = updatedStatus;
+        document.getElementById("planStartText").textContent = formatDate(
+          planStartInput.value,
+        );
+        document.getElementById("planEndText").textContent = formatDate(
+          planEndInput.value,
+        );
+        document.getElementById("planDescriptionText").textContent =
+          planDescriptionInput.value.trim();
+
+        planTitleDisplay.textContent = updatedName;
+        planStatusText.textContent = updatedStatus;
+        planStatusBadge.textContent = updatedStatus;
+
+        if (updatedStatus === "Active") {
+          planStatusBadge.className =
+            "badge rounded-pill bg-success-subtle text-success-emphasis px-3 py-2";
+        } else if (updatedStatus === "Draft") {
+          planStatusBadge.className =
+            "badge rounded-pill bg-warning-subtle text-warning-emphasis px-3 py-2";
+        } else if (updatedStatus === "Paused") {
+          planStatusBadge.className =
+            "badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-2";
+        } else {
+          planStatusBadge.className =
+            "badge rounded-pill bg-danger-subtle text-danger-emphasis px-3 py-2";
+        }
+
+        setEditMode(false);
+      });
+    </script>
   </body>
 </html>
