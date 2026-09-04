@@ -163,9 +163,10 @@ body {
 
 /* ---- Navbar ---- */
 .fd-navbar {
-  background-color: rgba(0, 97, 165, 0.85);
+  background-color: rgba(11, 55, 92, 0.96);
   backdrop-filter: blur(8px);
   height: 5rem;
+  box-shadow: none;
 }
 
 .fd-navbar .navbar-brand {
@@ -188,19 +189,33 @@ body {
 .fd-navbar .nav-link:hover,
 .fd-navbar .nav-link:focus {
   color: var(--fd-on-primary);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 .fd-navbar .nav-link.active {
   color: var(--fd-on-primary);
   font-weight: 700;
-  border-bottom: 2px solid var(--fd-secondary-container);
+  border-bottom: 2px solid rgba(202, 225, 255, 0.9);
 }
 .fd-navbar .btn-login {
   color: var(--fd-on-primary);
   font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 .fd-navbar .btn-login:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.fd-navbar .btn-fd-secondary {
+  background-color: #0d3f6b;
+  color: var(--fd-on-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+.fd-navbar .btn-fd-secondary:hover {
+  background-color: #0a355d;
+  color: var(--fd-on-primary);
+  box-shadow: none;
 }
 .fd-navbar-toggler {
   border-color: rgba(255, 255, 255, 0.5);
